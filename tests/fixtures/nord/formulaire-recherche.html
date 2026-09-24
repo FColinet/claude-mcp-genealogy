@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head data-captcha="hcaptcha">
+                    
+
+    <!-- Matomo -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+
+        /* This code come from https://www.cnil.fr/sites/default/files/typo/document/Configuration_piwik.pdf */
+        _paq.push([function() {
+            var self = this;
+            function getOriginalVisitorCookieTimeout() {
+                var now = new Date(),
+                    nowTs = Math.round(now.getTime() / 1000),
+                    visitorInfo = self.getVisitorInfo();
+                var createTs = parseInt(visitorInfo[2]);
+                var cookieTimeout = 33696000; // 13 mois en secondes
+                return createTs + cookieTimeout - nowTs;
+            }
+            this.setVisitorCookieTimeout( getOriginalVisitorCookieTimeout() );
+        }]);
+
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['disableCookies']);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="https://cd59-matomo.naoned.fr//";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', 2]);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <!-- End Matomo Code -->
+
+        
+        <meta charset="utf-8">
+        <title>Actes paroissiaux et d&#039;état civil - Recherche ciblée - Site Web des Archives départementales du Nord</title>
+
+        <meta name="twitter:card" content="summary" /><meta property="og:url" content="https://archivesdepartementales.lenord.fr/search/form/dc4e871d-0b62-41fb-9921-5ded573781b8" /><meta property="og:title" content="Actes paroissiaux et d&#039;état civil - Recherche ciblée" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"/>
+        <meta name="format-detection" content="telephone=no" />
+
+        
+                    <link rel="apple-touch-icon" sizes="180x180" href="/assets/src/application/Custom/assets/static/front/favicons/apple-touch-icon.831aee91b6aa5bb4f3a03b6b050dac28.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/src/application/Custom/assets/static/front/favicons/favicon-32x32.d31b88f89127fdb4c010270db2fd377b.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/src/application/Custom/assets/static/front/favicons/favicon-16x16.a6c3fefdf51f5fed7fabc2b5df35713a.png">
+<link rel="manifest" href="/assets/src/application/Custom/assets/static/front/favicons/site.webmanifest.6ad2bd6962b36ccd88e1e053531ed9d5.json">
+<link rel="mask-icon" href="/assets/src/application/Custom/assets/static/front/favicons/safari-pinned-tab.20af97c6d42b8327e1e0b62088215b99.svg" color="#5bbad5">
+
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+        
+        <link rel="stylesheet" type="text/css" href="/assets/assets/front/scss/common.132105fda5c453c917ea4cfde164c6ef.css" />
+        <link rel="stylesheet" type="text/css" href="/assets/assets/fonts/index.0e20f316ab6f0bba53f85722bccd5491.css">
+
+            
+    <link rel="stylesheet" type="text/css" href="/assets/assets/front/scss/formulaire.291b81ca1656c7fd56b120fe03089eae.css">
+
+        <link rel="stylesheet" type="text/css" href="/assets/src/application/Custom/assets/src/scss/index.45eb196da682891f454ca528621b7c9e.css" />
+        <link rel="stylesheet" type="text/css" href="/assets/node_modules/@knight-lab/timelinejs/dist/css/timeline.1f24a26632f1a70a920eae94a02df2a0.css" />
+
+    </head>
+    <body id="formulaire">
+
+                    <header id="header" role="banner">
+    <div class="institutional-banner-desktop">
+        
+    <div class="institutional-banner-burger">
+                    <div class="container institutional">
+        <div class="row">
+                            <div class="header-footer-col col-md-12 col-lg-12 header-footer-align-right">
+                    
+                    
+    <a href="https://lenord.fr"
+                             rel="noopener noreferrer"            target="_blank"
+            >
+            <img
+        src="/assets/src/application/Custom/assets/static/front/img/icono-logo/logo-header-institutional.abd79a44cc8cd7248bd46aeabda9eeca.png"
+                alt="Logo département du Nord"    />
+
+    </a>
+                </div>
+                    </div>
+    </div>
+
+    </div>
+
+    </div>
+    <div id="main-header">
+        <a id="logo" href="/" title="Aller à la page d&#039;accueil">
+    <img class="logo-desktop" src="/assets/src/application/Custom/assets/static/front/img/icono-logo/logo-header.0b7f57c45671b22f94c90d0b1d95a3eb.png" alt="Site Web des Archives départementales du Nord"/>
+
+        
+    <img class="logo-mobile" src="/assets/src/application/Custom/assets/static/front/img/icono-logo/logo-header.0b7f57c45671b22f94c90d0b1d95a3eb.png" alt="Site Web des Archives départementales du Nord"/>
+
+    <span class="sr-only">Site Web des Archives départementales du Nord</span>
+</a>
+            
+<nav id="main-menu" role="navigation">
+            <ul aria-label="menu principal">
+                                    <li class="submenu-container"><a href="#">Nous connaître</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/histoire"
+    title="Aller à la page : &quot;HISTOIRE&quot;"
+>HISTOIRE</a>
+</li>
+                    <li><a
+    href="/page/nos-missions"
+    title="Aller à la page : &quot;MISSIONS&quot;"
+>MISSIONS</a>
+</li>
+            </ul>
+</li>
+                                <li class="submenu-container"><a href="#">Consulter</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/nouveautes-du-site-internet"
+    title="Aller à la page : &quot;NOUVEAUTÉS DU SITE INTERNET&quot;"
+>NOUVEAUTÉS DU SITE INTERNET</a>
+</li>
+                    <li><a
+    href="/page/tables-decennales"
+    title="Aller à la page : &quot;TABLES DECENNALES&quot;"
+>TABLES DECENNALES</a>
+</li>
+                    <li><a
+    href="/page/registres-paroissiaux-et-d-etat-civil"
+    title="Aller à la page : &quot;REGISTRES PAROISSIAUX ET D&#039;ETAT CIVIL&quot;"
+>REGISTRES PAROISSIAUX ET D&#039;ETAT CIVIL</a>
+</li>
+                    <li><a
+    href="/page/matricules-militaires"
+    title="Aller à la page : &quot;MATRICULES MILITAIRES&quot;"
+>MATRICULES MILITAIRES</a>
+</li>
+                    <li><a
+    href="/page/recensements-de-population"
+    title="Aller à la page : &quot;RECENSEMENTS DE POPULATION&quot;"
+>RECENSEMENTS DE POPULATION</a>
+</li>
+                    <li><a
+    href="/page/tables-des-successions-et-absences-fiches-deces"
+    title="Aller à la page : &quot;TABLES DES SUCCESSIONS ET ABSENCES / FICHES DECES&quot;"
+>TABLES DES SUCCESSIONS ET ABSENCES / FICHES DECES</a>
+</li>
+                    <li><a
+    href="/page/tables-et-repertoires-des-hypotheques"
+    title="Aller à la page : &quot;TABLES ET REPERTOIRES DES HYPOTHEQUES&quot;"
+>TABLES ET REPERTOIRES DES HYPOTHEQUES</a>
+</li>
+                    <li><a
+    href="/page/plans-du-cadastre-du-consulat-et-napoleonien"
+    title="Aller à la page : &quot;PLANS CADASTRAUX&quot;"
+>PLANS CADASTRAUX</a>
+</li>
+            </ul>
+</li>
+                                <li class="submenu-container"><a href="#">Rechercher</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/recherche-globale"
+    title="Aller à la page : &quot;RECHERCHE GLOBALE&quot;"
+>RECHERCHE GLOBALE</a>
+</li>
+                    <li><a
+    href="/page/recherche-par-cadre-de-classement"
+    title="Aller à la page : &quot;RECHERCHE PAR CADRE DE CLASSEMENT&quot;"
+>RECHERCHE PAR CADRE DE CLASSEMENT</a>
+</li>
+            </ul>
+</li>
+                                <li class="submenu-container"><a href="#">Découvrir autrement</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/agenda-culturel"
+    title="Aller à la page : &quot;AGENDA CULTUREL&quot;"
+>AGENDA CULTUREL</a>
+</li>
+                    <li><a
+    href="/page/les-ateliers"
+    title="Aller à la page : &quot;LES ATELIERS&quot;"
+>LES ATELIERS</a>
+</li>
+                    <li><a
+    href="/page/publications"
+    title="Aller à la page : &quot;PUBLICATIONS&quot;"
+>PUBLICATIONS</a>
+</li>
+                    <li><a
+    href="/page/le-labo-des-archives"
+    title="Aller à la page : &quot;LE LABO DES ARCHIVES&quot;"
+>LE LABO DES ARCHIVES</a>
+</li>
+                    <li><a
+    href="/page/cahiers-pedagogiques"
+    title="Aller à la page : &quot;CAHIERS PEDAGOGIQUES&quot;"
+>CAHIERS PEDAGOGIQUES</a>
+</li>
+                    <li><a
+    href="/page/emprunter-une-exposition-itinerante"
+    title="Aller à la page : &quot;EMPRUNTER UNE EXPOSITION ITINERANTE&quot;"
+>EMPRUNTER UNE EXPOSITION ITINERANTE</a>
+</li>
+                    <li><a
+    href="/page/extraits-de-collections-photographiques"
+    title="Aller à la page : &quot;EXTRAITS DE COLLECTIONS PHOTOGRAPHIQUES&quot;"
+>EXTRAITS DE COLLECTIONS PHOTOGRAPHIQUES</a>
+</li>
+                    <li><a
+    href="/page/concours-national-de-la-resistance-et-de-la-deportation-de-2026"
+    title="Aller à la page : &quot;CONCOURS NATIONAL DE LA RESISTANCE ET DE LA DEPORTATION&quot;"
+>CONCOURS NATIONAL DE LA RESISTANCE ET DE LA DEPORTATION</a>
+</li>
+            </ul>
+</li>
+                                <li class="submenu-container"><a href="#">Participer</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/le-forum-officiel-des-archives-departementales-du-nord"
+    title="Aller à la page : &quot;FORUM&quot;"
+>FORUM</a>
+</li>
+                    <li><a
+    href="/page/collecte-des-archives-de-la-seconde-guerre-mondiale-et-de-la-liberation"
+    title="Aller à la page : &quot;COLLECTE DES ARCHIVES DE LA SECONDE GUERRE MONDIALE ET DE LA LIBERATION&quot;"
+>COLLECTE DES ARCHIVES DE LA SECONDE GUERRE MONDIALE ET DE LA LIBERATION</a>
+</li>
+                    <li><a
+    href="/page/grande-collecte-des-archives-du-sport"
+    title="Aller à la page : &quot;COLLECTE DES ARCHIVES DU SPORT&quot;"
+>COLLECTE DES ARCHIVES DU SPORT</a>
+</li>
+                    <li><a
+    href="/page/grande-collecte-des-archives-du-cyclisme"
+    title="Aller à la page : &quot;COLLECTE DES ARCHIVES DU CYCLISME&quot;"
+>COLLECTE DES ARCHIVES DU CYCLISME</a>
+</li>
+            </ul>
+</li>
+                                <li class="submenu-container"><a href="#">Venir et utiliser</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/venir"
+    title="Aller à la page : &quot;VENIR&quot;"
+>VENIR</a>
+</li>
+                    <li><a
+    href="/page/reservation-de-documents"
+    title="Aller à la page : &quot;RESERVATION DE DOCUMENTS&quot;"
+>RESERVATION DE DOCUMENTS</a>
+</li>
+                    <li><a
+    href="/page/acceder-aux-archives"
+    title="Aller à la page : &quot;ACCÉDER AUX ARCHIVES&quot;"
+>ACCÉDER AUX ARCHIVES</a>
+</li>
+                    <li><a
+    href="/page/reproduire-des-documents"
+    title="Aller à la page : &quot;REPRODUIRE DES DOCUMENTS&quot;"
+>REPRODUIRE DES DOCUMENTS</a>
+</li>
+                    <li><a
+    href="/page/reutilisation-des-informations-publiques"
+    title="Aller à la page : &quot;RÉUTILISER LES INFORMATIONS PUBLIQUES&quot;"
+>RÉUTILISER LES INFORMATIONS PUBLIQUES</a>
+</li>
+                    <li><a
+    href="/page/nous-contacter"
+    title="Aller à la page : &quot;NOUS CONTACTER&quot;"
+>NOUS CONTACTER</a>
+</li>
+            </ul>
+</li>
+            
+        </ul>
+    </nav>
+<nav id="burger-main-menu" class="left" role="navigation">
+            <div>
+            <label for="burger-sidebar" class="toggle" aria-label="Ouvrir le menu déroulant">
+                <span class="sr-only">Ouvrir le menu déroulant</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </label>
+            <input type="checkbox" id="burger-sidebar" class="sidebartoggler">
+
+            <div class="page-wrap">
+                <div class="sidebar">
+                    <ul class="mainnav">
+                                                <li class="submenu-container"><a href="#">Nous connaître</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/histoire"
+    title="Aller à la page : &quot;HISTOIRE&quot;"
+>HISTOIRE</a>
+</li>
+                    <li><a
+    href="/page/nos-missions"
+    title="Aller à la page : &quot;MISSIONS&quot;"
+>MISSIONS</a>
+</li>
+            </ul>
+</li>
+                                <li class="submenu-container"><a href="#">Consulter</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/nouveautes-du-site-internet"
+    title="Aller à la page : &quot;NOUVEAUTÉS DU SITE INTERNET&quot;"
+>NOUVEAUTÉS DU SITE INTERNET</a>
+</li>
+                    <li><a
+    href="/page/tables-decennales"
+    title="Aller à la page : &quot;TABLES DECENNALES&quot;"
+>TABLES DECENNALES</a>
+</li>
+                    <li><a
+    href="/page/registres-paroissiaux-et-d-etat-civil"
+    title="Aller à la page : &quot;REGISTRES PAROISSIAUX ET D&#039;ETAT CIVIL&quot;"
+>REGISTRES PAROISSIAUX ET D&#039;ETAT CIVIL</a>
+</li>
+                    <li><a
+    href="/page/matricules-militaires"
+    title="Aller à la page : &quot;MATRICULES MILITAIRES&quot;"
+>MATRICULES MILITAIRES</a>
+</li>
+                    <li><a
+    href="/page/recensements-de-population"
+    title="Aller à la page : &quot;RECENSEMENTS DE POPULATION&quot;"
+>RECENSEMENTS DE POPULATION</a>
+</li>
+                    <li><a
+    href="/page/tables-des-successions-et-absences-fiches-deces"
+    title="Aller à la page : &quot;TABLES DES SUCCESSIONS ET ABSENCES / FICHES DECES&quot;"
+>TABLES DES SUCCESSIONS ET ABSENCES / FICHES DECES</a>
+</li>
+                    <li><a
+    href="/page/tables-et-repertoires-des-hypotheques"
+    title="Aller à la page : &quot;TABLES ET REPERTOIRES DES HYPOTHEQUES&quot;"
+>TABLES ET REPERTOIRES DES HYPOTHEQUES</a>
+</li>
+                    <li><a
+    href="/page/plans-du-cadastre-du-consulat-et-napoleonien"
+    title="Aller à la page : &quot;PLANS CADASTRAUX&quot;"
+>PLANS CADASTRAUX</a>
+</li>
+            </ul>
+</li>
+                                <li class="submenu-container"><a href="#">Rechercher</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/recherche-globale"
+    title="Aller à la page : &quot;RECHERCHE GLOBALE&quot;"
+>RECHERCHE GLOBALE</a>
+</li>
+                    <li><a
+    href="/page/recherche-par-cadre-de-classement"
+    title="Aller à la page : &quot;RECHERCHE PAR CADRE DE CLASSEMENT&quot;"
+>RECHERCHE PAR CADRE DE CLASSEMENT</a>
+</li>
+            </ul>
+</li>
+                                <li class="submenu-container"><a href="#">Découvrir autrement</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/agenda-culturel"
+    title="Aller à la page : &quot;AGENDA CULTUREL&quot;"
+>AGENDA CULTUREL</a>
+</li>
+                    <li><a
+    href="/page/les-ateliers"
+    title="Aller à la page : &quot;LES ATELIERS&quot;"
+>LES ATELIERS</a>
+</li>
+                    <li><a
+    href="/page/publications"
+    title="Aller à la page : &quot;PUBLICATIONS&quot;"
+>PUBLICATIONS</a>
+</li>
+                    <li><a
+    href="/page/le-labo-des-archives"
+    title="Aller à la page : &quot;LE LABO DES ARCHIVES&quot;"
+>LE LABO DES ARCHIVES</a>
+</li>
+                    <li><a
+    href="/page/cahiers-pedagogiques"
+    title="Aller à la page : &quot;CAHIERS PEDAGOGIQUES&quot;"
+>CAHIERS PEDAGOGIQUES</a>
+</li>
+                    <li><a
+    href="/page/emprunter-une-exposition-itinerante"
+    title="Aller à la page : &quot;EMPRUNTER UNE EXPOSITION ITINERANTE&quot;"
+>EMPRUNTER UNE EXPOSITION ITINERANTE</a>
+</li>
+                    <li><a
+    href="/page/extraits-de-collections-photographiques"
+    title="Aller à la page : &quot;EXTRAITS DE COLLECTIONS PHOTOGRAPHIQUES&quot;"
+>EXTRAITS DE COLLECTIONS PHOTOGRAPHIQUES</a>
+</li>
+                    <li><a
+    href="/page/concours-national-de-la-resistance-et-de-la-deportation-de-2026"
+    title="Aller à la page : &quot;CONCOURS NATIONAL DE LA RESISTANCE ET DE LA DEPORTATION&quot;"
+>CONCOURS NATIONAL DE LA RESISTANCE ET DE LA DEPORTATION</a>
+</li>
+            </ul>
+</li>
+                                <li class="submenu-container"><a href="#">Participer</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/le-forum-officiel-des-archives-departementales-du-nord"
+    title="Aller à la page : &quot;FORUM&quot;"
+>FORUM</a>
+</li>
+                    <li><a
+    href="/page/collecte-des-archives-de-la-seconde-guerre-mondiale-et-de-la-liberation"
+    title="Aller à la page : &quot;COLLECTE DES ARCHIVES DE LA SECONDE GUERRE MONDIALE ET DE LA LIBERATION&quot;"
+>COLLECTE DES ARCHIVES DE LA SECONDE GUERRE MONDIALE ET DE LA LIBERATION</a>
+</li>
+                    <li><a
+    href="/page/grande-collecte-des-archives-du-sport"
+    title="Aller à la page : &quot;COLLECTE DES ARCHIVES DU SPORT&quot;"
+>COLLECTE DES ARCHIVES DU SPORT</a>
+</li>
+                    <li><a
+    href="/page/grande-collecte-des-archives-du-cyclisme"
+    title="Aller à la page : &quot;COLLECTE DES ARCHIVES DU CYCLISME&quot;"
+>COLLECTE DES ARCHIVES DU CYCLISME</a>
+</li>
+            </ul>
+</li>
+                                <li class="submenu-container"><a href="#">Venir et utiliser</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/venir"
+    title="Aller à la page : &quot;VENIR&quot;"
+>VENIR</a>
+</li>
+                    <li><a
+    href="/page/reservation-de-documents"
+    title="Aller à la page : &quot;RESERVATION DE DOCUMENTS&quot;"
+>RESERVATION DE DOCUMENTS</a>
+</li>
+                    <li><a
+    href="/page/acceder-aux-archives"
+    title="Aller à la page : &quot;ACCÉDER AUX ARCHIVES&quot;"
+>ACCÉDER AUX ARCHIVES</a>
+</li>
+                    <li><a
+    href="/page/reproduire-des-documents"
+    title="Aller à la page : &quot;REPRODUIRE DES DOCUMENTS&quot;"
+>REPRODUIRE DES DOCUMENTS</a>
+</li>
+                    <li><a
+    href="/page/reutilisation-des-informations-publiques"
+    title="Aller à la page : &quot;RÉUTILISER LES INFORMATIONS PUBLIQUES&quot;"
+>RÉUTILISER LES INFORMATIONS PUBLIQUES</a>
+</li>
+                    <li><a
+    href="/page/nous-contacter"
+    title="Aller à la page : &quot;NOUS CONTACTER&quot;"
+>NOUS CONTACTER</a>
+</li>
+            </ul>
+</li>
+            
+                    </ul>
+                    
+    <div class="institutional-banner-burger">
+                    <div class="container institutional">
+        <div class="row">
+                            <div class="header-footer-col col-md-12 col-lg-12 header-footer-align-right">
+                    
+                    
+    <a href="https://lenord.fr"
+                             rel="noopener noreferrer"            target="_blank"
+            >
+            <img
+        src="/assets/src/application/Custom/assets/static/front/img/icono-logo/logo-header-institutional.abd79a44cc8cd7248bd46aeabda9eeca.png"
+                alt="Logo département du Nord"    />
+
+    </a>
+                </div>
+                    </div>
+    </div>
+
+    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+<nav id="user-profile" role="navigation">
+    <ul>
+                    <li class="user-profile submenu-container">
+                            <a href="/user/login?targetRoute=front.search.form.view&amp;targetRouteParameters%5Buuid%5D=dc4e871d-0b62-41fb-9921-5ded573781b8" class="user-profile-icon-container" title="Mon espace personnel">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            </a>
+            <ul class="subnav">
+                <li>
+                    <a href="/user/login?targetRoute=front.search.form.view&amp;targetRouteParameters%5Buuid%5D=dc4e871d-0b62-41fb-9921-5ded573781b8" title="Se connecter">Se connecter</a>
+                </li>
+                                    <li>
+                        <a href="/register" title="S&#039;inscrire">S&#039;inscrire</a>
+                    </li>
+                            </ul>
+
+                </li>
+    
+    </ul>
+</nav>
+<nav id="burger-user-profile" class="right" role="navigation">
+    <label for="profile-sidebar" class="toggle">
+                    <i class="fa fa-user-circle-o user-profile-icon " aria-hidden="true"></i>
+    
+    </label>
+    <input type="checkbox" id="profile-sidebar" class="sidebartoggler">
+
+    <div class="page-wrap">
+        <div class="sidebar">
+            <ul class="mainnav">
+                                                <li>
+                <a href="/user/login?targetRoute=front.search.form.view&amp;targetRouteParameters%5Buuid%5D=dc4e871d-0b62-41fb-9921-5ded573781b8" title="Se connecter">Se connecter</a>
+            </li>
+                            <li>
+                    <a href="/register" title="S&#039;inscrire">S&#039;inscrire</a>
+                </li>
+                        
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    </div>
+</header>
+        
+        <div id="old-browsers" class="disclaimer">
+    <div class="text">
+        Ce portail est conçu pour être utilisé sur les navigateurs Chrome, Firefox, Safari et Edge. Pour une expérience optimale, nous vous invitons à utiliser l&#039;un de ces navigateurs.
+    </div>
+    <div class="buttons">
+        <button type="button" class="btn btn-primary" id="old-browsers-accept">J&#039;ai compris</button>
+    </div>
+</div>
+
+        <main role="main" id="page-top">
+
+                                        
+            
+            
+                            
+            
+                            
+<aside class="alert-container row">
+</aside>
+            
+            <div class="container">
+                    <div class="row">
+        <div class="presentation col-md-7 editorial-content">
+            <h1>Actes paroissiaux et d&#039;état civil</h1>
+            <div data-richtext="{&quot;blocks&quot;:[{&quot;key&quot;:&quot;rejf&quot;,&quot;text&quot;:&quot;Microfilms : 1Mi / 2Mi / 1MiEC / 5 Mi (avant 1900).&quot;,&quot;type&quot;:&quot;unordered-list-item&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[{&quot;offset&quot;:0,&quot;length&quot;:10,&quot;style&quot;:&quot;ITALIC&quot;},{&quot;offset&quot;:0,&quot;length&quot;:10,&quot;style&quot;:&quot;UNDERLINE&quot;}],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;3to40&quot;,&quot;text&quot;:&quot;Registres 3E, tous arrondissements (après 1900).&quot;,&quot;type&quot;:&quot;unordered-list-item&quot;,&quot;depth&quot;:1,&quot;inlineStyleRanges&quot;:[{&quot;offset&quot;:0,&quot;length&quot;:12,&quot;style&quot;:&quot;ITALIC&quot;},{&quot;offset&quot;:0,&quot;length&quot;:12,&quot;style&quot;:&quot;UNDERLINE&quot;}],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;dthpo&quot;,&quot;text&quot;:&quot;Registres complémentaires : ajout de manques.&quot;,&quot;type&quot;:&quot;unordered-list-item&quot;,&quot;depth&quot;:1,&quot;inlineStyleRanges&quot;:[{&quot;offset&quot;:0,&quot;length&quot;:25,&quot;style&quot;:&quot;ITALIC&quot;},{&quot;offset&quot;:0,&quot;length&quot;:25,&quot;style&quot;:&quot;UNDERLINE&quot;}],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;3sika&quot;,&quot;text&quot;:&quot;                                      __________________________________________________ &quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[{&quot;offset&quot;:0,&quot;length&quot;:38,&quot;style&quot;:&quot;BOLD&quot;}],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;91tjg&quot;,&quot;text&quot;:&quot;&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;3rn4l&quot;,&quot;text&quot;:&quot; Les actes numérisés à partir des documents originaux, pour la période 1890-1940, selon les communes, ne sont diffusables qu’après les délais recommandés par le Service interministériel des Archives de France pour la diffusion sur internet des archives de l’état civil.  &quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;9j3i3&quot;,&quot;text&quot;:&quot;Naissances de plus de 100 ans&quot;,&quot;type&quot;:&quot;unordered-list-item&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;cfbrs&quot;,&quot;text&quot;:&quot;Mariages de plus de 75 ans&quot;,&quot;type&quot;:&quot;unordered-list-item&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;ahnlo&quot;,&quot;text&quot;:&quot;Décès de plus de 25 ans&quot;,&quot;type&quot;:&quot;unordered-list-item&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;72l4l&quot;,&quot;text&quot;:&quot;Tout registre contenant des naissances est donc soumis au délai de diffusion de 100 ans.&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[{&quot;offset&quot;:0,&quot;length&quot;:88,&quot;style&quot;:&quot;BOLD&quot;}],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;4l17b&quot;,&quot;text&quot;:&quot;\nA noter, que pour certaines communes, les registres ouverts à la fin du XIXe ont été clôturés il y a moins de 100 ans et ne sont donc pas diffusables.&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[{&quot;offset&quot;:1,&quot;length&quot;:150,&quot;style&quot;:&quot;ITALIC&quot;}],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;17nt8&quot;,&quot;text&quot;:&quot;                                      __________________________________________________&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[{&quot;offset&quot;:0,&quot;length&quot;:38,&quot;style&quot;:&quot;BOLD&quot;}],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;dsqg0&quot;,&quot;text&quot;:&quot;Ressources :&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;b3b1h&quot;,&quot;text&quot;:&quot;MICROFILMS (1Mi, 2Mi, 1MiEC, 5Mi) : par Communes | dates | types d&#039;actes | cotes de microfilms. (.pdf 3Mo)&quot;,&quot;type&quot;:&quot;unordered-list-item&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[{&quot;offset&quot;:0,&quot;length&quot;:10,&quot;style&quot;:&quot;BOLD&quot;}],&quot;entityRanges&quot;:[{&quot;offset&quot;:0,&quot;length&quot;:96,&quot;key&quot;:0}],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;57af4&quot;,&quot;text&quot;:&quot;REGISTRES 3 E + complémentaires (publiés sur internet ou consultables en salle de lecture) : Mise à jour Janvier 2026 par Communes | dates | types d&#039;actes | cotes des registres. (.pdf 4Mo)&quot;,&quot;type&quot;:&quot;unordered-list-item&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[{&quot;offset&quot;:0,&quot;length&quot;:31,&quot;style&quot;:&quot;BOLD&quot;},{&quot;offset&quot;:105,&quot;length&quot;:12,&quot;style&quot;:&quot;BOLD&quot;}],&quot;entityRanges&quot;:[{&quot;offset&quot;:0,&quot;length&quot;:177,&quot;key&quot;:1}],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}}],&quot;entityMap&quot;:{&quot;0&quot;:{&quot;type&quot;:&quot;LINK&quot;,&quot;mutability&quot;:&quot;MUTABLE&quot;,&quot;data&quot;:{&quot;target&quot;:&quot;https://archivesdepartementales.lenord.fr/editorial/document/4ab388af-8303-4c47-a719-916a712d3f87&quot;,&quot;openInNewWindow&quot;:true,&quot;title&quot;:&quot;&quot;}},&quot;1&quot;:{&quot;type&quot;:&quot;LINK&quot;,&quot;mutability&quot;:&quot;MUTABLE&quot;,&quot;data&quot;:{&quot;target&quot;:&quot;https://archivesdepartementales.lenord.fr/document/classeur-3e-janvier-2026&quot;,&quot;openInNewWindow&quot;:true,&quot;title&quot;:&quot;&quot;}}}}"></div>
+        </div>
+        <div class="form col-md-5">
+            <form id="form-search-advanced-search" method="get" action="/search/results">
+                <input type="hidden" value="dc4e871d-0b62-41fb-9921-5ded573781b8" name="formUuid"/>
+                <input type="hidden" value="date_asc" name="sort"/>
+                <input type="hidden" value="list" name="mode"/>
+                                    <input type="hidden" value="image" name="facet_media"/>
+                
+                                    <div class="form-group">
+                            <label class="col-12" for="0-controlledAccessGeographicName">Commune ou paroisse</label>
+    <div class="row">
+        <div class="col-12">
+                            <div
+                    class="enhanced-select multiselect"
+                    data-input-id="0-controlledAccessGeographicName"
+                    data-name="0-controlledAccessGeographicName"
+                    data-options="[&quot;ABANCOURT&quot;,&quot;ABSCON&quot;,&quot;AIBES&quot;,&quot;AIX&quot;,&quot;ALLENNES-LES-MARAIS&quot;,&quot;ALNES&quot;,&quot;AMFROIPRET&quot;,&quot;ANHIERS&quot;,&quot;ANICHE&quot;,&quot;ANNAPPES&quot;,&quot;ANNEUX&quot;,&quot;ANNOEULLIN&quot;,&quot;ANOR&quot;,&quot;ANSTAING&quot;,&quot;ANZIN&quot;,&quot;ARLEUX&quot;,&quot;ARMBOUTS-CAPPEL&quot;,&quot;ARMENTIERES&quot;,&quot;ARNEKE&quot;,&quot;ARTRES&quot;,&quot;ASCQ&quot;,&quot;ASSEVENT&quot;,&quot;ATTICHES&quot;,&quot;AUBENCHEUL-AU-BAC&quot;,&quot;AUBERCHICOURT&quot;,&quot;AUBERS&quot;,&quot;AUBIGNY-AU-BAC&quot;,&quot;AUBRY (DU HAINAUT)&quot;,&quot;AUBY&quot;,&quot;AUCHY-LEZ-ORCHIES&quot;,&quot;AUDENCOURT&quot;,&quot;AUDIGNIES&quot;,&quot;AULNOY-LEZ-VALENCIENNES&quot;,&quot;AULNOYE&quot;,&quot;AULNOYE-AYMERIES (AULNOYE)&quot;,&quot;AULNOYE-AYMERIES (AYMERIES)&quot;,&quot;AVELIN&quot;,&quot;AVELIN (ANTROEUILLES)&quot;,&quot;AVESNELLES&quot;,&quot;AVESNELLES (et WAUDRECHIES)&quot;,&quot;AVESNELLES (SAINT DENIS)&quot;,&quot;AVESNES-LE-SEC&quot;,&quot;AVESNES-LES-AUBERT&quot;,&quot;AVESNES-SUR-HELPE&quot;,&quot;AWOINGT&quot;,&quot;AYMERIES&quot;,&quot;BACHANT&quot;,&quot;BACHY&quot;,&quot;BAILLEUL&quot;,&quot;BAILLEUL (CHAP. DE LA CREBBE)&quot;,&quot;BAISIEUX&quot;,&quot;BAIVES&quot;,&quot;BAIVES (BAIVES ET MOUSTIER)&quot;,&quot;BAMBECQUE&quot;,&quot;BANTEUX&quot;,&quot;BANTIGNY&quot;,&quot;BANTOUZELLE&quot;,&quot;BAS-LIEU&quot;,&quot;BAUVIN&quot;,&quot;BAVAY&quot;,&quot;BAVAY (BUVIGNIES)&quot;,&quot;BAVAY (LOUVIGNIES-BAVAY)&quot;,&quot;BAVINCHOVE&quot;,&quot;BAZUEL&quot;,&quot;BEAUCAMPS-LIGNY&quot;,&quot;BEAUCAMPS-LIGNY (BEAUCAMPS)&quot;,&quot;BEAUCAMPS-LIGNY (LIGNY)&quot;,&quot;BEAUDIGNIES&quot;,&quot;BEAUFORT&quot;,&quot;BEAUMONT-EN-CAMBRESIS&quot;,&quot;BEAURAIN&quot;,&quot;BEAUREPAIRE-SUR-SAMBRE&quot;,&quot;BEAURIEUX&quot;,&quot;BEAUVOIS-EN-CAMBRESIS&quot;,&quot;BELLAING&quot;,&quot;BELLIGNIES&quot;,&quot;BELLIGNIES (BREAUGRIES)&quot;,&quot;BERELLES&quot;,&quot;BERGUES&quot;,&quot;BERGUES (ST MARTIN)&quot;,&quot;BERGUES (ST PIERRE)&quot;,&quot;BERLAIMONT&quot;,&quot;BERMERAIN&quot;,&quot;BERMERIES&quot;,&quot;BERSEE&quot;,&quot;BERSILLIES&quot;,&quot;BERTHEN&quot;,&quot;BERTRY&quot;,&quot;BETHENCOURT&quot;,&quot;BETHENCOURT (et AUDENCOURT)&quot;,&quot;BETTIGNIES&quot;,&quot;BETTRECHIES&quot;,&quot;BEUGNIES&quot;,&quot;BEUVRAGES&quot;,&quot;BEUVRY-LA-FORET&quot;,&quot;BEVILLERS&quot;,&quot;BEVILLERS (BOUSSIERES)&quot;,&quot;BIERNE&quot;,&quot;BISSEZEELE&quot;,&quot;BLARINGHEM&quot;,&quot;BLECOURT&quot;,&quot;BLECOURT (et SANCOURT)&quot;,&quot;BLECOURT (SANCOURT)&quot;,&quot;BOESCHEPE&quot;,&quot;BOESEGHEM&quot;,&quot;BOIS-GRENIER&quot;,&quot;BOLLEZEELE&quot;,&quot;BONDUES&quot;,&quot;BORRE&quot;,&quot;BOUCHAIN&quot;,&quot;BOULOGNE-SUR-HELPE&quot;,&quot;BOURBOURG&quot;,&quot;BOURBOURG (CAMPAGNE)&quot;,&quot;BOURBOURG (ST JEAN BAPTISTE)&quot;,&quot;BOURBOURG (VILLE)&quot;,&quot;BOURBOURG-CAMPAGNE&quot;,&quot;BOURBOURG-VILLE&quot;,&quot;BOURGHELLES&quot;,&quot;BOURSIES&quot;,&quot;BOUSBECQUE&quot;,&quot;BOUSIES&quot;,&quot;BOUSIGNIES&quot;,&quot;BOUSIGNIES-SUR-ROC&quot;,&quot;BOUSSIERES-EN-CAMBRESIS&quot;,&quot;BOUSSIERES-SUR-SAMBRE&quot;,&quot;BOUSSOIS&quot;,&quot;BOUVIGNIES&quot;,&quot;BOUVINES&quot;,&quot;BRAY-DUNES&quot;,&quot;BRIASTRE&quot;,&quot;BRILLON&quot;,&quot;BROUCKERQUE&quot;,&quot;BROXEELE&quot;,&quot;BRUAY-SUR-L&#039;ESCAUT&quot;,&quot;BRUILLE-LEZ-MARCHIENNES&quot;,&quot;BRUILLE-SAINT-AMAND&quot;,&quot;BRUNEMONT&quot;,&quot;BRY&quot;,&quot;BUGNICOURT&quot;,&quot;BUSIGNY&quot;,&quot;BUYSSCHEURE&quot;,&quot;CAESTRE&quot;,&quot;CAGNONCLES&quot;,&quot;CAMBRAI&quot;,&quot;CAMBRAI (CANTIMPRE)&quot;,&quot;CAMBRAI (HOP. MIL. ST JEAN)&quot;,&quot;CAMBRAI (LA MADELEINE)&quot;,&quot;CAMBRAI (MAISON DES ANGLAISES)&quot;,&quot;CAMBRAI (METROPOLE)&quot;,&quot;CAMBRAI (NOTRE DAME)&quot;,&quot;CAMBRAI (Officialit\u00e9)&quot;,&quot;CAMBRAI (PAROISSES NON DESIGNEES)&quot;,&quot;CAMBRAI (ST AUBERT)&quot;,&quot;CAMBRAI (ST GENGULPHE)&quot;,&quot;CAMBRAI (ST GEORGES)&quot;,&quot;CAMBRAI (ST GERY)&quot;,&quot;CAMBRAI (ST LOUIS CITADELLE)&quot;,&quot;CAMBRAI (ST LOUIS)&quot;,&quot;CAMBRAI (ST MARTIN)&quot;,&quot;CAMBRAI (ST NICOLAS)&quot;,&quot;CAMBRAI (ST SAUVEUR)&quot;,&quot;CAMBRAI (ST SEPULCRE)&quot;,&quot;CAMBRAI (ST WAAST)&quot;,&quot;CAMBRAI (STE CROIX)&quot;,&quot;CAMBRAI (STE ELISABETH)&quot;,&quot;CAMBRAI (STE MARIE MAGDELAINE)&quot;,&quot;CAMPHIN-EN-CAREMBAULT&quot;,&quot;CAMPHIN-EN-PEVELE&quot;,&quot;CANTAING-SUR-ESCAUT&quot;,&quot;CANTIN&quot;,&quot;CAPELLE (SUR-ECAILLON)&quot;,&quot;CAPINGHEM&quot;,&quot;CAPPELLE-BROUCK&quot;,&quot;CAPPELLE-EN-PEVELE&quot;,&quot;CAPPELLE-LA-GRANDE&quot;,&quot;CARNIERES&quot;,&quot;CARNIN&quot;,&quot;CARTIGNIES&quot;,&quot;CASSEL&quot;,&quot;CASSEL (NOTRE DAME)&quot;,&quot;CASSEL (ST NICOLAS)&quot;,&quot;CATILLON-SUR-SAMBRE&quot;,&quot;CATTENIERES&quot;,&quot;CAUDRY&quot;,&quot;CAULLERY&quot;,&quot;CAUROIR&quot;,&quot;CERFONTAINE&quot;,&quot;CHATEAU-L&#039;ABBAYE&quot;,&quot;CHEMY&quot;,&quot;CHERENG&quot;,&quot;CHOISIES&quot;,&quot;CLAIRFAYTS&quot;,&quot;CLARY&quot;,&quot;COBRIEUX&quot;,&quot;COLLERET&quot;,&quot;COMINES&quot;,&quot;CONDE-SUR-L&#039;ESCAUT&quot;,&quot;COUDEKERQUE&quot;,&quot;COUDEKERQUE-BRANCHE&quot;,&quot;COUDEKERQUE-BRANCHE (JEU DE MAIL)&quot;,&quot;COUDEKERQUE-BRANCHE - Section A, B&quot;,&quot;COUDEKERQUE-BRANCHE - Section D et C, B&quot;,&quot;COURCHELETTES&quot;,&quot;COUSOLRE&quot;,&quot;COUTICHES&quot;,&quot;CRAYWICK&quot;,&quot;CRESPIN&quot;,&quot;CREVECOEUR-SUR-L&#039;ESCAUT&quot;,&quot;CROCHTE&quot;,&quot;CROIX&quot;,&quot;CROIX-CALUYAU&quot;,&quot;CUINCY&quot;,&quot;CURGIES&quot;,&quot;CUVILLERS&quot;,&quot;CYSOING&quot;,&quot;DAMOUSIES&quot;,&quot;DECHY&quot;,&quot;DEHERIES&quot;,&quot;DENAIN&quot;,&quot;DEULEMONT&quot;,&quot;DIMECHAUX&quot;,&quot;DIMONT&quot;,&quot;DIMONT (OFFIES)&quot;,&quot;DOIGNIES&quot;,&quot;DOMPIERRE-SUR-HELPE&quot;,&quot;DON&quot;,&quot;DOUAI&quot;,&quot;DOUAI (FORT DE LA SCARPE)&quot;,&quot;DOUAI (HOPITAL MILITAIRE)&quot;,&quot;DOUAI (NOTRE DAME)&quot;,&quot;DOUAI (ST ALBIN)&quot;,&quot;DOUAI (ST AME)&quot;,&quot;DOUAI (ST JACQUES)&quot;,&quot;DOUAI (ST NICOLAS)&quot;,&quot;DOUAI (ST PIERRE)&quot;,&quot;DOUCHY-LES-MINES&quot;,&quot;DOURLERS&quot;,&quot;DRINCHAM&quot;,&quot;DUNKERQUE&quot;,&quot;DUNKERQUE (HOPITAL MILITAIRE)&quot;,&quot;DUNKERQUE (ST LOUIS CITADELLE)&quot;,&quot;EBBLINGHEM&quot;,&quot;ECAILLON&quot;,&quot;ECCLES&quot;,&quot;ECLAIBES&quot;,&quot;ECUELIN&quot;,&quot;EECKE&quot;,&quot;ELESMES&quot;,&quot;ELINCOURT&quot;,&quot;EMERCHICOURT&quot;,&quot;EMERCHICOURT (AZENCOURT)&quot;,&quot;EMMERIN&quot;,&quot;ENGLEFONTAINE&quot;,&quot;ENGLOS&quot;,&quot;ENNETIERES-EN-WEPPES&quot;,&quot;ENNEVELIN&quot;,&quot;EPPE-SAUVAGE&quot;,&quot;ERCHIN&quot;,&quot;ERINGHEM&quot;,&quot;ERQUINGHEM-LE-SEC&quot;,&quot;ERQUINGHEM-LYS&quot;,&quot;ERRE&quot;,&quot;ESCARMAIN&quot;,&quot;ESCAUDAIN&quot;,&quot;ESCAUDOEUVRES&quot;,&quot;ESCAUFOURT&quot;,&quot;ESCAUTPONT&quot;,&quot;ESCOBECQUES&quot;,&quot;ESNES&quot;,&quot;ESQUELBECQ&quot;,&quot;ESQUERCHIN&quot;,&quot;ESTAIRES&quot;,&quot;ESTOURMEL&quot;,&quot;ESTREES&quot;,&quot;ESTREUX&quot;,&quot;ESTRUN&quot;,&quot;ESWARS&quot;,&quot;ETH&quot;,&quot;ETH (ETH et BRY)&quot;,&quot;ETROEUNGT&quot;,&quot;FACHES-THUMESNIL&quot;,&quot;FAMARS&quot;,&quot;FAUMONT&quot;,&quot;FAVRIL (LE)&quot;,&quot;FECHAIN&quot;,&quot;FEIGNIES&quot;,&quot;FELLERIES&quot;,&quot;FENAIN&quot;,&quot;FERIN&quot;,&quot;FERON&quot;,&quot;FERRIERE-LA-GRANDE&quot;,&quot;FERRIERE-LA-PETITE&quot;,&quot;FLAUMONT-WAUDRECHIES&quot;,&quot;FLAUMONT-WAUDRECHIES (FLAUMONT)&quot;,&quot;FLAUMONT-WAUDRECHIES (WAUDRECHIES)&quot;,&quot;FLERS-EN-ESCREBIEUX&quot;,&quot;FLERS-LEZ-LILLE&quot;,&quot;FLERS-LEZ-LILLE et section du BREUCQ&quot;,&quot;FLESQUIERES&quot;,&quot;FLETRE&quot;,&quot;FLINES-LEZ-MORTAGNE&quot;,&quot;FLINES-LEZ-RACHES&quot;,&quot;FLOURSIES&quot;,&quot;FLOYON&quot;,&quot;FONTAINE-AU-BOIS&quot;,&quot;FONTAINE-AU-PIRE&quot;,&quot;FONTAINE-NOTRE-DAME&quot;,&quot;FORENVILLE&quot;,&quot;FORENVILLE (et SERANVILLIERS et AWOINGT)&quot;,&quot;FOREST-EN-CAMBRESIS&quot;,&quot;FOREST-SUR-MARQUE&quot;,&quot;FORT-MARDYCK&quot;,&quot;FOURMIES&quot;,&quot;FOURNES-EN-WEPPES&quot;,&quot;FRASNOY&quot;,&quot;FRELINGHIEN&quot;,&quot;FRESNES-SUR-ESCAUT&quot;,&quot;FRESSAIN&quot;,&quot;FRESSIES&quot;,&quot;FRETIN&quot;,&quot;FROMELLES&quot;,&quot;GENECH&quot;,&quot;GHISSIGNIES&quot;,&quot;GHYVELDE&quot;,&quot;GLAGEON&quot;,&quot;GODEWAERSVELDE&quot;,&quot;GOEULZIN&quot;,&quot;GOGNIES-CHAUSSEE&quot;,&quot;GOMMEGNIES&quot;,&quot;GOMMEGNIES (GOMMEGNIES FRASNOY)&quot;,&quot;GONDECOURT&quot;,&quot;GONNELIEU&quot;,&quot;GOUZEAUCOURT&quot;,&quot;GRAND-FAYT&quot;,&quot;GRAND-FORT-PHILIPPE&quot;,&quot;GRANDE-SYNTHE&quot;,&quot;GRAVELINES&quot;,&quot;GRUSON&quot;,&quot;GUESNAIN&quot;,&quot;GUSSIGNIES&quot;,&quot;HALLENNES-LEZ-HAUBOURDIN&quot;,&quot;HALLUIN&quot;,&quot;HAMEL&quot;,&quot;HANTAY&quot;,&quot;HARDIFORT&quot;,&quot;HARGNIES&quot;,&quot;HASNON&quot;,&quot;HASPRES&quot;,&quot;HAUBOURDIN&quot;,&quot;HAUCOURT-EN-CAMBRESIS&quot;,&quot;HAULCHIN&quot;,&quot;HAUSSY&quot;,&quot;HAUT-LIEU&quot;,&quot;HAUTMONT&quot;,&quot;HAVELUY&quot;,&quot;HAVERSKERQUE&quot;,&quot;HAYNECOURT&quot;,&quot;HAZEBROUCK&quot;,&quot;HECQ&quot;,&quot;HELESMES&quot;,&quot;HELLEMMES-LILLE&quot;,&quot;HEM&quot;,&quot;HEM-LENGLET&quot;,&quot;HERGNIES&quot;,&quot;HERIN&quot;,&quot;HERLIES&quot;,&quot;HERRIN&quot;,&quot;HERZEELE&quot;,&quot;HESTRUD&quot;,&quot;HOLQUE&quot;,&quot;HON-HERGIES&quot;,&quot;HONDEGHEM&quot;,&quot;HONDSCHOOTE&quot;,&quot;HONNECHY&quot;,&quot;HONNECOURT-SUR-ESCAUT&quot;,&quot;HORDAIN&quot;,&quot;HORNAING&quot;,&quot;HORNAING (ST CALIXTE)&quot;,&quot;HORNAING (ST JEAN)&quot;,&quot;HOUDAIN-LEZ-BAVAY&quot;,&quot;HOUPLIN-ANCOISNE&quot;,&quot;HOUPLINES&quot;,&quot;HOUTKERQUE&quot;,&quot;HOYMILLE&quot;,&quot;ILLIES&quot;,&quot;INCHY&quot;,&quot;INCHY et BEAUMONT&quot;,&quot;IWUY&quot;,&quot;JENLAIN&quot;,&quot;JEUMONT&quot;,&quot;JOLIMETZ&quot;,&quot;KILLEM&quot;,&quot;LA BASSEE&quot;,&quot;LA CHAPELLE-D&#039;ARMENTIERES&quot;,&quot;LA FLAMENGRIE&quot;,&quot;LA GORGUE&quot;,&quot;LA GROISE&quot;,&quot;LA LONGUEVILLE&quot;,&quot;LA MADELEINE&quot;,&quot;LA NEUVILLE&quot;,&quot;LA SENTINELLE&quot;,&quot;LALLAING&quot;,&quot;LAMBERSART&quot;,&quot;LAMBRES-LEZ-DOUAI&quot;,&quot;LANDAS&quot;,&quot;LANDRECIES&quot;,&quot;LANNOY&quot;,&quot;LAROUILLIES&quot;,&quot;LAUWIN-PLANQUE&quot;,&quot;LE CATEAU-CAMBRESIS&quot;,&quot;LE CATEAU-CAMBRESIS (N. DAME)&quot;,&quot;LE CATEAU-CAMBRESIS (ST MARTIN)&quot;,&quot;LE DOULIEU&quot;,&quot;LE FAVRIL&quot;,&quot;LE MAISNIL&quot;,&quot;LE QUESNOY&quot;,&quot;LECELLES&quot;,&quot;LECLUSE&quot;,&quot;LEDERZEELE&quot;,&quot;LEDERZEELE (NIEURLET)&quot;,&quot;LEDRINGHEM&quot;,&quot;LEERS&quot;,&quot;LEFFRINCKOUCKE&quot;,&quot;LES MOERES&quot;,&quot;LES RUES DES VIGNES&quot;,&quot;LESDAIN&quot;,&quot;LESDAIN (disoc\u00e8se de Tournai)&quot;,&quot;LESQUIN&quot;,&quot;LEVAL&quot;,&quot;LEWARDE&quot;,&quot;LEZ-FONTAINE&quot;,&quot;LEZENNES&quot;,&quot;LIESSIES&quot;,&quot;LIESSIES (et WILLIES)&quot;,&quot;LIEU-SAINT-AMAND&quot;,&quot;LIGNY&quot;,&quot;LIGNY (canton de Haubourdin)&quot;,&quot;LIGNY-EN-CAMBRESIS&quot;,&quot;LIGNY-HAUCOURT&quot;,&quot;LILLE&quot;,&quot;LILLE (ESQUERMES)&quot;,&quot;LILLE (FIVES)&quot;,&quot;LILLE (HOPITAL COMTESSE)&quot;,&quot;LILLE (HOPITAL GENERAL)&quot;,&quot;LILLE (HOPITAL ST SAUVEUR)&quot;,&quot;LILLE (LA MADELEINE extra-muros)&quot;,&quot;LILLE (LA MADELEINE intra-muros)&quot;,&quot;LILLE (LA MADELEINE)&quot;,&quot;LILLE (LES MOULINS)&quot;,&quot;LILLE (ST ANDRE)&quot;,&quot;LILLE (ST ETIENNE)&quot;,&quot;LILLE (ST MAURICE)&quot;,&quot;LILLE (ST PIERRE)&quot;,&quot;LILLE (ST SAUVEUR)&quot;,&quot;LILLE (STE CATHERINE)&quot;,&quot;LILLE (WAZEMMES)&quot;,&quot;LIMONT-FONTAINE&quot;,&quot;LINSELLES&quot;,&quot;LOCQUIGNOL&quot;,&quot;LOFFRE&quot;,&quot;LOMME&quot;,&quot;LOMPRET&quot;,&quot;LOOBERGHE&quot;,&quot;LOON-PLAGE&quot;,&quot;LOOS&quot;,&quot;LOURCHES&quot;,&quot;LOUVIGNIES-BAVAY&quot;,&quot;LOUVIGNIES-BAVAY (BAVAY)&quot;,&quot;LOUVIGNIES-QUESNOY&quot;,&quot;LOUVIL&quot;,&quot;LOUVROIL&quot;,&quot;LYNDE&quot;,&quot;LYS-LEZ-LANNOY&quot;,&quot;MAING&quot;,&quot;MAIRIEUX&quot;,&quot;MAIRIEUX (BERSILLIES, LA GRISOELLE)&quot;,&quot;MAIRIEUX (LA GRISOELLE)&quot;,&quot;MALINCOURT&quot;,&quot;MALO-LES-BAINS&quot;,&quot;MARBAIX&quot;,&quot;MARCHIENNES&quot;,&quot;MARCHIENNES-CAMPAGNE&quot;,&quot;MARCOING&quot;,&quot;MARCQ-EN-BAROEUL&quot;,&quot;MARCQ-EN-OSTREVENT&quot;,&quot;MARDYCK&quot;,&quot;MARESCHES&quot;,&quot;MARETZ&quot;,&quot;MARLY&quot;,&quot;MAROILLES&quot;,&quot;MARPENT&quot;,&quot;MARQUETTE-EN-OSTREVANT&quot;,&quot;MARQUETTE-LEZ-LILLE&quot;,&quot;MARQUILLIES&quot;,&quot;MASNIERES&quot;,&quot;MASNY&quot;,&quot;MASTAING&quot;,&quot;MAUBEUGE&quot;,&quot;MAUBEUGE (ST PIERRE)&quot;,&quot;MAULDE&quot;,&quot;MAUROIS&quot;,&quot;MAZINGHIEN&quot;,&quot;MECQUIGNIES&quot;,&quot;MERCKEGHEM&quot;,&quot;MERIGNIES&quot;,&quot;MERRIS&quot;,&quot;MERVILLE&quot;,&quot;METEREN&quot;,&quot;MILLAM&quot;,&quot;MILLONFOSSE&quot;,&quot;MOERES (LES)&quot;,&quot;MOEUVRES&quot;,&quot;MONCEAU-SAINT-WAAST&quot;,&quot;MONCHAUX-SUR-ECAILLON&quot;,&quot;MONCHEAUX&quot;,&quot;MONCHECOURT&quot;,&quot;MONS-EN-BAROEUL&quot;,&quot;MONS-EN-PEVELE&quot;,&quot;MONTAY&quot;,&quot;MONTIGNY-EN-CAMBRESIS&quot;,&quot;MONTIGNY-EN-OSTREVENT&quot;,&quot;MONTRECOURT&quot;,&quot;MORBECQUE&quot;,&quot;MORBECQUE (LA MOTTE AU BOIS)&quot;,&quot;MORENCHIES&quot;,&quot;MORTAGNE-DU-NORD&quot;,&quot;MOUCHIN&quot;,&quot;MOUSTIER-EN-FAGNE&quot;,&quot;MOUVAUX&quot;,&quot;NAVES&quot;,&quot;NEUF-BERQUIN&quot;,&quot;NEUF-MESNIL&quot;,&quot;NEUVILLE-EN-AVESNOIS&quot;,&quot;NEUVILLE-EN-FERRAIN&quot;,&quot;NEUVILLE-SAINT-REMY&quot;,&quot;NEUVILLE-SUR-ESCAUT&quot;,&quot;NEUVILLY&quot;,&quot;NIEPPE&quot;,&quot;NIERGNIES&quot;,&quot;NIVELLE&quot;,&quot;NOMAIN&quot;,&quot;NOORDPEENE&quot;,&quot;NOYELLES-LES-SECLIN&quot;,&quot;NOYELLES-SUR-ESCAUT&quot;,&quot;NOYELLES-SUR-SAMBRE&quot;,&quot;NOYELLES-SUR-SELLE&quot;,&quot;OBIES&quot;,&quot;OBRECHIES&quot;,&quot;OCHTEZEELE&quot;,&quot;ODOMEZ&quot;,&quot;OHAIN&quot;,&quot;OISY&quot;,&quot;ONNAING&quot;,&quot;OOST-CAPPEL&quot;,&quot;ORCHIES&quot;,&quot;ORCHIES (HOPITAL THEMOLIN)&quot;,&quot;ORS&quot;,&quot;ORSINVAL&quot;,&quot;OSTRICOURT&quot;,&quot;OUDEZEELE&quot;,&quot;OXELAERE&quot;,&quot;PAILLENCOURT&quot;,&quot;PECQUENCOURT&quot;,&quot;PERENCHIES&quot;,&quot;PERONNE-EN-MELANTOIS&quot;,&quot;PETIT-FAYT&quot;,&quot;PETITE-FORET&quot;,&quot;PETITE-SYNTHE&quot;,&quot;PHALEMPIN&quot;,&quot;PITGAM&quot;,&quot;POIX-DU-NORD&quot;,&quot;POMMEREUIL&quot;,&quot;PONT-A-MARCQ&quot;,&quot;PONT-SUR-SAMBRE&quot;,&quot;POTELLE&quot;,&quot;PRADELLES&quot;,&quot;PREMESQUES&quot;,&quot;PRESEAU&quot;,&quot;PREUX-AU-BOIS&quot;,&quot;PREUX-AU-SART&quot;,&quot;PRISCHES&quot;,&quot;PROUVY&quot;,&quot;PROVILLE&quot;,&quot;PROVIN&quot;,&quot;QUAEDYPRE&quot;,&quot;QUAROUBLE&quot;,&quot;QUERENAING&quot;,&quot;QUESNOY-SUR-DEULE&quot;,&quot;QUIEVELON&quot;,&quot;QUIEVRECHAIN&quot;,&quot;QUIEVY&quot;,&quot;RACHES&quot;,&quot;RADINGHEM-EN-WEPPES&quot;,&quot;RAILLENCOURT-SAINTE-OLLE&quot;,&quot;RAIMBEAUCOURT&quot;,&quot;RAINSARS&quot;,&quot;RAISMES&quot;,&quot;RAMILLIES&quot;,&quot;RAMOUSIES&quot;,&quot;RAUCOURT-AU-BOIS&quot;,&quot;RECQUIGNIES&quot;,&quot;REJET-DE-BEAULIEU&quot;,&quot;RENESCURE&quot;,&quot;REUMONT&quot;,&quot;REXPOEDE&quot;,&quot;RIBECOURT-LA-TOUR&quot;,&quot;RIEULAY&quot;,&quot;RIEUX-EN-CAMBRESIS&quot;,&quot;ROBERSART&quot;,&quot;ROEULX&quot;,&quot;ROMBIES-ET-MARCHIPONT&quot;,&quot;ROMERIES&quot;,&quot;ROMERIES (et VERTIGNEUL)&quot;,&quot;RONCHIN&quot;,&quot;RONCQ&quot;,&quot;ROOST-WARENDIN&quot;,&quot;ROSENDAEL&quot;,&quot;ROSULT&quot;,&quot;ROUBAIX&quot;,&quot;ROUCOURT&quot;,&quot;ROUSIES&quot;,&quot;ROUVIGNIES&quot;,&quot;RUBROUCK&quot;,&quot;RUESNES&quot;,&quot;RUMEGIES&quot;,&quot;RUMILLY-EN-CAMBRESIS&quot;,&quot;SAILLY-LEZ-CAMBRAI&quot;,&quot;SAILLY-LEZ-LANNOY&quot;,&quot;SAINGHIN-EN-MELANTOIS&quot;,&quot;SAINGHIN-EN-WEPPES&quot;,&quot;SAINS-DU-NORD&quot;,&quot;SAINT-AMAND-LES-EAUX&quot;,&quot;SAINT-ANDRE&quot;,&quot;SAINT-AUBERT&quot;,&quot;SAINT-AUBIN&quot;,&quot;SAINT-AYBERT&quot;,&quot;SAINT-BENIN&quot;,&quot;SAINT-GEORGES-SUR-L&#039;AA&quot;,&quot;SAINT-HILAIRE-LEZ-CAMBRAI&quot;,&quot;SAINT-HILAIRE-SUR-HELPE&quot;,&quot;SAINT-JANS-CAPPEL&quot;,&quot;SAINT-MARTIN-SUR-ECAILLON&quot;,&quot;SAINT-MOMELIN&quot;,&quot;SAINT-PIERRE-BROUCK&quot;,&quot;SAINT-POL-SUR-MER&quot;,&quot;SAINT-PYTHON&quot;,&quot;SAINT-REMY-CHAUSSEE&quot;,&quot;SAINT-REMY-DU-NORD (anc. Mal Bati)&quot;,&quot;SAINT-REMY-MAL-BATI&quot;,&quot;SAINT-SAULVE&quot;,&quot;SAINT-SOUPLET&quot;,&quot;SAINT-SOUPLET (ESCAUFOURT)&quot;,&quot;SAINT-SYLVESTRE-CAPPEL&quot;,&quot;SAINT-VAAST-EN-CAMBRESIS&quot;,&quot;SAINT-WAAST (-LA-VALLEE)&quot;,&quot;SAINTE-MARIE-CAPPEL&quot;,&quot;SALESCHES&quot;,&quot;SALOME&quot;,&quot;SAMEON&quot;,&quot;SANCOURT&quot;,&quot;SANTES&quot;,&quot;SARS-ET-ROSIERES&quot;,&quot;SARS-POTERIES&quot;,&quot;SASSEGNIES&quot;,&quot;SAULTAIN&quot;,&quot;SAULZOIR&quot;,&quot;SEBOURG&quot;,&quot;SECLIN&quot;,&quot;SECLIN (HOPITAL)&quot;,&quot;SELVIGNY&quot;,&quot;SEMERIES&quot;,&quot;SEMOUSIES&quot;,&quot;SEPMERIES&quot;,&quot;SEQUEDIN&quot;,&quot;SERANVILLERS (et FORENVILLE et AWOINGT)&quot;,&quot;SERANVILLERS-FORENVILLE&quot;,&quot;SERANVILLERS-FORENVILLE (AWOINGT)&quot;,&quot;SERANVILLIERS&quot;,&quot;SERCUS&quot;,&quot;SIN-LE-NOBLE&quot;,&quot;SOCX&quot;,&quot;SOLESMES&quot;,&quot;SOLRE-LE-CHATEAU&quot;,&quot;SOLRINNES&quot;,&quot;SOMAIN&quot;,&quot;SOMMAING&quot;,&quot;SPYCKER&quot;,&quot;STAPLE&quot;,&quot;STEENBECQUE&quot;,&quot;STEENE&quot;,&quot;STEENVOORDE&quot;,&quot;STEENWERCK&quot;,&quot;STRAZEELE&quot;,&quot;TAISNIERES-EN-THIERACHE&quot;,&quot;TAISNIERES-SUR-HON&quot;,&quot;TEMPLEMARS&quot;,&quot;TEMPLEUVE&quot;,&quot;TERDEGHEM&quot;,&quot;TETEGHEM&quot;,&quot;THIANT&quot;,&quot;THIENNES&quot;,&quot;THIVENCELLE&quot;,&quot;THUMERIES&quot;,&quot;THUN-L&#039;EVEQUE&quot;,&quot;THUN-SAINT-AMAND&quot;,&quot;THUN-SAINT-MARTIN&quot;,&quot;TILLOY-LEZ-CAMBRAI&quot;,&quot;TILLOY-LEZ-MARCHIENNES&quot;,&quot;TOUFFLERS&quot;,&quot;TOURCOING&quot;,&quot;TOURMIGNIES&quot;,&quot;TRELON&quot;,&quot;TRESSIN&quot;,&quot;TRITH-SAINT-LEGER&quot;,&quot;TROISVILLES&quot;,&quot;UXEM&quot;,&quot;VALENCIENNES&quot;,&quot;VALENCIENNES (DIVERS COUVENTS)&quot;,&quot;VALENCIENNES (HOPITAL MILITAIRE)&quot;,&quot;VALENCIENNES (L&#039;EPAIX)&quot;,&quot;VALENCIENNES (LE COUCHANT)&quot;,&quot;VALENCIENNES (LE LEVANT)&quot;,&quot;VALENCIENNES (MUNICIPALITE)&quot;,&quot;VALENCIENNES (N.D. DE LA CHAUSSEE)&quot;,&quot;VALENCIENNES (N.D. LA GRANDE)&quot;,&quot;VALENCIENNES (SAINT GERY)&quot;,&quot;VALENCIENNES (SAINT JACQUES)&quot;,&quot;VALENCIENNES (SAINT JEAN)&quot;,&quot;VALENCIENNES (SAINT NICOLAS)&quot;,&quot;VALENCIENNES (SIEGE DE 1793)&quot;,&quot;VALENCIENNES (ST JEAN ET DE L&#039;EPAIX)&quot;,&quot;VALENCIENNES (ST VAAST EN VILLE)&quot;,&quot;VALENCIENNES (ST VAAST LA HAUT)&quot;,&quot;VALENCIENNES (TOUTES PAROISSES)&quot;,&quot;VENDEGIES-AU-BOIS&quot;,&quot;VENDEGIES-SUR-ECAILLON&quot;,&quot;VENDEVILLE&quot;,&quot;VERCHAIN-MAUGRE&quot;,&quot;VERLINGHEM&quot;,&quot;VERTAIN&quot;,&quot;VICQ&quot;,&quot;VIESLY&quot;,&quot;VIEUX-BERQUIN&quot;,&quot;VIEUX-CONDE&quot;,&quot;VIEUX-MESNIL&quot;,&quot;VIEUX-RENG&quot;,&quot;VIEUX-RENG (LAMERIES)&quot;,&quot;VILLEREAU&quot;,&quot;VILLEREAU (POTELLE)&quot;,&quot;VILLERS-AU-TERTRE&quot;,&quot;VILLERS-CAMPEAU&quot;,&quot;VILLERS-EN-CAUCHIES&quot;,&quot;VILLERS-GUISLAIN&quot;,&quot;VILLERS-OUTREAUX&quot;,&quot;VILLERS-PLOUICH&quot;,&quot;VILLERS-POL&quot;,&quot;VILLERS-POL (et ORSINVAL)&quot;,&quot;VILLERS-SIRE-NICOLE&quot;,&quot;VOLCKERINCKHOVE&quot;,&quot;VRED&quot;,&quot;WAHAGNIES&quot;,&quot;WALINCOURT&quot;,&quot;WALLERS&quot;,&quot;WALLERS-EN-FAGNE (anc. TRELON)&quot;,&quot;WALLON-CAPPEL&quot;,&quot;WAMBAIX&quot;,&quot;WAMBRECHIES&quot;,&quot;WANDIGNIES-HAMAGE&quot;,&quot;WANDIGNIES-HAMAGE (HAMAGE)&quot;,&quot;WANNEHAIN&quot;,&quot;WARGNIES-LE-GRAND&quot;,&quot;WARGNIES-LE-PETIT&quot;,&quot;WARHEM&quot;,&quot;WARLAING&quot;,&quot;WARLAING (ALNES ET WARLAING)&quot;,&quot;WARNETON&quot;,&quot;WARNETON (-BAS)&quot;,&quot;WARNETON (-SUD)&quot;,&quot;WASNES-AU-BAC&quot;,&quot;WASQUEHAL&quot;,&quot;WATTEN&quot;,&quot;WATTIGNIES&quot;,&quot;WATTIGNIES-LA-VICTOIRE&quot;,&quot;WATTRELOS&quot;,&quot;WAVRECHAIN-SOUS-DENAIN&quot;,&quot;WAVRECHAIN-SOUS-FAULX&quot;,&quot;WAVRIN&quot;,&quot;WAZIERS&quot;,&quot;WEMAERS-CAPPEL&quot;,&quot;WERVICQ-SUD&quot;,&quot;WEST-CAPPEL&quot;,&quot;WICRES&quot;,&quot;WIGNEHIES&quot;,&quot;WILLEMS&quot;,&quot;WILLIES&quot;,&quot;WINNEZEELE&quot;,&quot;WORMHOUT&quot;,&quot;WULVERDINGHE&quot;,&quot;WYLDER&quot;,&quot;ZEGERSCAPPEL&quot;,&quot;ZERMEZEELE&quot;,&quot;ZUYDCOOTE&quot;,&quot;ZUYTPEENE&quot;]"
+                    data-selected-options="null"
+                    data-placeholder="Sélectionnez un ou plusieurs éléments"
+                    data-no-options-message="Aucun résultat"
+                    data-loading-message="Chargement en cours..."
+                    data-submit-as-json="false"
+                ></div>
+                    </div>
+    </div>
+
+                    </div>
+                                    <div class="form-group">
+                            <label class="col-12" for="1-controlledAccessPhysicalCharacteristic">Types d&#039;actes (facultatif)</label>
+    <div class="row">
+        <div class="col-12">
+                            <div
+                    class="enhanced-select multiselect"
+                    data-input-id="1-controlledAccessPhysicalCharacteristic"
+                    data-name="1-controlledAccessPhysicalCharacteristic"
+                    data-options="[&quot;Bapt\u00eames&quot;,&quot;Naissances&quot;,&quot;Mariages&quot;,&quot;S\u00e9pultures&quot;,&quot;D\u00e9c\u00e8s&quot;]"
+                    data-selected-options="null"
+                    data-placeholder="Sélectionnez un ou plusieurs éléments"
+                    data-no-options-message="Aucun résultat"
+                    data-loading-message="Chargement en cours..."
+                    data-submit-as-json="false"
+                ></div>
+                    </div>
+    </div>
+
+                    </div>
+                                    <div class="form-group">
+                            <label class="col-12" for="2-date">Année précise (facultatif)</label>
+    <div class="row">
+        <div class="col-12">
+                            <input type="number" id="2-date" class="form-control" name="2-date" min="1" max="2026"
+                       value=""/>
+                    </div>
+    </div>
+
+                    </div>
+                                    <div class="form-group">
+                            <label class="col-12" for="3-date">ou période (facultatif)</label>
+    <div class="row">
+        <div class="col-12">
+                            <div class="form-row period">
+                                                            <div class="col">
+                        <label class="sr-only" for="3-date_begin">ou période (facultatif) - Année de début</label>
+                        <input
+                            placeholder="Année de début"
+                            onfocus="this.placeholder = ''"
+                            onblur="this.placeholder = 'Année de début'"
+                            type="number"
+                            class="form-control"
+                            id="3-date_begin"
+                            name="3-date_begin"
+                            data-validate-required="#3-date_end"
+                            min="1" max="2026"
+                            value=""/>
+                    </div>
+                    <div class="col">
+                        <label class="sr-only" for="3-date_end">ou période (facultatif) - Année de fin</label>
+                        <input
+                            placeholder="Année de fin"
+                            onfocus="this.placeholder = ''"
+                            onblur="this.placeholder = 'Année de fin'"
+                            type="number"
+                            class="form-control"
+                            id="3-date_end"
+                            name="3-date_end"
+                            data-validate-gte="#3-date_begin"
+                            data-validate-required="#3-date_begin"
+                            min="1" max="2026"
+                            value=""/>
+                    </div>
+                </div>
+                    </div>
+    </div>
+
+                    </div>
+                
+                <div class="row form-group">
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class=" d-flex flex-wrap justify-content-center">
+                            <a class="btn btn-secondary" href="/search/form/dc4e871d-0b62-41fb-9921-5ded573781b8">
+                                Vider les champs
+                            </a>
+                            <button class="btn btn-primary" type="submit">Rechercher</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+            </div>
+
+        </main>
+
+                        
+    <footer id="footer" role="contentinfo">
+                                
+                                <div class="container default">
+        <div class="row">
+                            <div class="header-footer-col col-md-3 col-lg-3 header-footer-align-center">
+                    
+                    
+    <a href="https://lenord.fr"
+                    >
+            <img
+        src="/assets/src/application/Custom/assets/static/front/img/icono-logo/logo-footer.ce9d376b3efa5117b7805c0bdbee7bb7.png"
+                alt="Logo département du Nord"    />
+
+    </a>
+                </div>
+                            <div class="header-footer-col col-md-3 col-lg-3 header-footer-align-left">
+                                            <span class="heading">Archives départementales du Nord</span>
+                    
+                    <p>
+    <p class="mb-0">22 rue Saint-Bernard</p>
+    <p class="mb-0">59000 Lille</p>
+</p>
+<p>
+    <i class="fa fa-phone" aria-label="Téléphone" aria-hidden="true"></i> 03 59 73 06 00
+</p>
+<p>
+    <a href="/cdn-cgi/l/email-protection#543526373c3d22313031241438313a3b26307a3226"><i class="fa fa-envelope" aria-label="Courriel" aria-hidden="true"></i><span class="__cf_email__" data-cfemail="c0a1b2a3a8a9b6a5a4a5b080aca5aeafb2a4eea6b2">[email&#160;protected]</span></a>
+</p>
+
+                </div>
+                            <div class="header-footer-col col-md-3 col-lg-3 header-footer-align-left">
+                                            <span class="heading">Salle de lecture</span>
+                    
+                    <span>Ouverture</span>
+<ul class="opening mb-3">
+    <li>du mardi au jeudi de 9h00 à 17h00</li>
+    <li>le vendredi de 9h00 à 16h00</li>
+</ul>
+<span>Fermeture</span>
+<ul class="opening">
+    <li>les jours fériés</li>
+    <li>du 1er au 14 juillet</li>
+</ul>
+                </div>
+                            <div class="header-footer-col col-md-3 col-lg-3 header-footer-align-left">
+                                            <span class="heading">Liens utiles</span>
+                    
+                    <ul class="links">
+
+    <li class="link">
+        <a href="/page/conditions-generales-d-utilisation" title="Conditions Générales d'Utilisation">
+            Conditions Générales d'Utilisation
+        </a>
+    </li>
+    <li class="link">
+        <a href="/page/conditions-generales-d-utilisation" title="Mentions légales">
+            Mentions légales
+        </a>
+    </li>
+    <li class="link">
+        <a href="/page/conditions-generales-d-utilisation" title="Politique de confidentialité">
+            Politique de confidentialité
+        </a>
+    </li>
+
+        <li class="link">
+        <a href="/page/declaration-d-accessibilite-non-conforme" title="Déclaration d&#039;accessibilité : non conforme">
+            Déclaration d&#039;accessibilité : non conforme
+        </a>
+    </li>
+    
+        <li class="link">
+        <a href="/page/credits" title="Credits">
+            Credits
+        </a>
+    </li>
+    
+    <li class="link acceo">
+        <a href="https://app.acce-o.fr/service/conseil_departemental_du_nord/151189" rel="noopener noreferrer" target="_blank" title="Sourd ou malentendant ?">
+            <img src="/assets/src/application/Custom/assets/static/front/img/acceo_blanc.6fb3245f8bd9d869badcca92fb5f4ca5.png" />
+            Sourd ou malentendant ?
+        </a>
+    </li>
+</ul>
+                </div>
+                    </div>
+    </div>
+
+                                    </footer>
+        
+        <a href="#page-top" id="scrollup" class="no-print" title="Revenir en haut de la page">
+            <i class="fa fa-angle-up" aria-hidden="true"></i>
+            <span class="sr-only">Revenir en haut de la page</span>
+        </a>
+
+                                    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/assets/common.9810116a885a90cd2023.js"></script>
+                            <script src="/assets/vendor.front.1cb8cf93f09725d172b0.js"></script>
+                            <script src="/assets/front.44b2ff403c3bcdfcba1b.js"></script>
+                    
+        <div id="rgpd-infos"
+     class="disclaimer"
+     >
+    <div class="text">
+        <p>
+            Ce site utilise des <span lang="en">cookies</span> techniques nécessaires à son bon fonctionnement. Ils ne contiennent aucune donnée personnelle et sont exemptés de consentements (Article 82 de la loi Informatique et Libertés).
+        </p>
+        <p>
+                            Vous pouvez consulter les conditions générales d’utilisation sur le lien ci-dessous.
+                    </p>
+    </div>
+    <div class="buttons">
+                                    <a href="/page/conditions-generales-d-utilisation" rel="noopener noreferrer" target="_blank" class="btn btn-secondary" title="En savoir plus sur les conditions générales d&#039;utilisation">
+            En savoir plus
+        </a>
+        <button type="button" class="btn btn-primary" id="rgpd-infos-understand">J&#039;ai compris</button>
+    </div>
+
+</div>
+        
+    <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3ffec1e59f7d688',t:'MTc5MDIzMzMzMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

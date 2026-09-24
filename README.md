@@ -11,11 +11,15 @@ Ce serveur adopte donc une architecture en **connecteurs** : chaque département
 ## Statut actuel
 
 - [x] Socle du serveur MCP (outils `rechercher_registres_etat_civil` et `lister_departements_disponibles`)
-- [ ] Connecteur Nord (59)
-- [ ] Connecteur Aisne (02)
-- [ ] Connecteur Marne (51)
+- [x] Connecteur Nord (59)
+- [x] Connecteur Marne (51)
+- [ ] Connecteur Aisne (02) — portail différent (visionneuse EAD plutôt que formulaire de recherche), à étudier séparément
+- [ ] Connecteur Pas-de-Calais (62) — identifié comme pertinent d'après l'arbre généalogique fourni (branche Lumbres/Calais/Saint-Omer)
+- [ ] Archives de l'État en Belgique — une bonne partie de l'ascendance remonte au Hainaut et à la province de Namur ; système d'archives distinct, à évaluer séparément
 
-Aucun connecteur départemental n'est encore branché : `lister_departements_disponibles` renvoie donc une liste vide tant que le premier connecteur n'est pas enregistré dans `src/index.ts`.
+Le Nord et la Marne partagent la même famille de portail de recherche avancée (`src/connectors/portailRechercheAvancee.ts`) : formulaire à `/search/form/<uuid>`, résultats à `/search/results`. Le connecteur analyse le formulaire à chaque recherche (noms de champs, liste des communes valides) plutôt que de figer des index de champs en dur, car ceux-ci diffèrent d'un département à l'autre et peuvent changer.
+
+**Limite connue :** ces portails sont protégés par un pare-feu applicatif qui bloque les requêtes émises par `fetch` de Node.js (mais pas `curl`) dans certains environnements sandboxés (dont l'environnement cloud de développement utilisé pour ce projet). Cela n'a pas été observé en exécution locale normale ; si `rechercher_registres_etat_civil` renvoie une erreur HTTP 403 de façon inattendue, vérifier que la machine qui exécute le serveur n'est pas elle-même derrière un proxy sortant restrictif.
 
 ## Prérequis
 
@@ -43,21 +47,24 @@ Ce projet suit une démarche **TDD** : chaque nouveau connecteur ou outil doit �
 
 ```
 src/
-  types.ts                 # types du domaine (RegistreTrouve, RechercheRegistreQuery...)
+  types.ts                        # types du domaine (RegistreTrouve, RechercheRegistreQuery...)
   connectors/
-    types.ts               # interface DepartementConnector
-    registry.ts            # registre associant un code département à son connecteur
-    <departement>.ts       # un module par département supporté (à venir)
+    types.ts                      # interface DepartementConnector
+    registry.ts                   # registre associant un code département à son connecteur
+    portailRechercheAvancee.ts    # connecteur générique pour la famille de portails /search/form + /search/results
+    nord.ts, marne.ts             # configuration (baseUrl, formUuid) de chaque département sur ce portail
   outils/
-    rechercherRegistres.ts # logique de dispatch vers le bon connecteur
-  serveur.ts                # construction du serveur MCP (outils exposés)
-  index.ts                  # point d'entrée (transport stdio)
+    rechercherRegistres.ts        # logique de dispatch vers le bon connecteur
+  serveur.ts                       # construction du serveur MCP (outils exposés)
+  index.ts                         # point d'entrée (transport stdio)
+tests/
+  fixtures/<departement>/          # pages HTML réelles utilisées comme fixtures de test (formulaire, résultats)
 ```
 
 ## Ajouter un nouveau département
 
-1. Créer `src/connectors/<code>.ts` exportant un objet conforme à `DepartementConnector` (`code`, `nom`, `rechercherRegistres`).
-2. Écrire d'abord les tests dans `tests/connectors/<code>.test.ts`, à partir d'échantillons réels (HTML/JSON) du portail concerné, avant d'écrire le code du connecteur (TDD).
+1. Vérifier si le portail du département utilise la même famille que le Nord/la Marne (URL de recherche avancée de la forme `/search/form/<uuid>`, résultats à `/search/results`). Si oui, il suffit d'ajouter un fichier `src/connectors/<code>.ts` qui appelle `creerConnecteurPortailRechercheAvancee({ code, nom, baseUrl, formUuid })` avec l'UUID relevé sur le site (voir `nord.ts`/`marne.ts` comme modèles) et de sauvegarder des fixtures réelles dans `tests/fixtures/<code>/`.
+2. Si le portail est différent (autre logiciel), écrire d'abord les tests dans `tests/connectors/<code>.test.ts` à partir d'échantillons HTML/JSON réels du site, avant d'implémenter le connecteur (TDD), en exportant un objet conforme à `DepartementConnector`.
 3. Enregistrer le connecteur dans `src/index.ts` via `registre.enregistrer(...)`.
 4. Mettre à jour la section « Statut actuel » de ce README.
 
@@ -89,6 +96,10 @@ Recherche les registres d'état civil numérisés pour une commune donnée.
 | `typeActe`   | enum   | non         | `naissance`, `mariage`, `deces` ou `table_decennale`      |
 | `anneeDebut` | number | non         | Première année de la période recherchée                   |
 | `anneeFin`   | number | non         | Dernière année de la période recherchée                   |
+
+Renvoie une liste de registres, chacun avec : `departement`, `commune`, `titre` (intitulé du registre sur le site source), `typesActes` (liste de libellés bruts — un registre ancien couvre souvent plusieurs types d'actes à la fois, ex. `["baptêmes - naissances", "mariages", "sépultures - décès"]`), `anneeDebut`, `anneeFin`, `cote` (cote d'archive), `lieu` (lieu tel qu'indiqué par la source) et `url` (lien vers la notice/visionneuse).
+
+Le paramètre `typeActe` en entrée est une catégorie simplifiée ; le connecteur la fait correspondre aux libellés réels du département interrogé (ex. « Naissances » et « Baptêmes » pour le Nord, « baptêmes - naissances » pour la Marne). Si le département ne propose pas ce type d'acte, le filtre est simplement ignoré plutôt que de forcer une recherche sans résultat.
 
 ### `lister_departements_disponibles`
 

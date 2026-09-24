@@ -25,7 +25,8 @@ describe("rechercherRegistres", () => {
       {
         departement: "59",
         commune: "Lille",
-        typeActe: "naissance",
+        titre: "LILLE / N [1880]",
+        typesActes: ["Naissances"],
         anneeDebut: 1880,
         anneeFin: 1880,
         url: "https://archivesdepartementales.lenord.fr/exemple",

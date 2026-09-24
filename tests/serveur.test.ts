@@ -14,7 +14,8 @@ function creerConnecteurFactice(): DepartementConnector {
         {
           departement: "59",
           commune: query.commune,
-          typeActe: query.typeActe ?? "inconnu",
+          titre: `${query.commune} / registre`,
+          typesActes: query.typeActe ? [query.typeActe] : [],
           anneeDebut: query.anneeDebut ?? 1900,
           anneeFin: query.anneeFin ?? 1900,
           url: "https://archivesdepartementales.lenord.fr/exemple",
@@ -53,7 +54,8 @@ describe("serveur MCP", () => {
       {
         departement: "59",
         commune: "Lille",
-        typeActe: "inconnu",
+        titre: "Lille / registre",
+        typesActes: [],
         anneeDebut: 1900,
         anneeFin: 1900,
         url: "https://archivesdepartementales.lenord.fr/exemple",

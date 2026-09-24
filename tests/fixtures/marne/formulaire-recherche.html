@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head data-captcha="recaptcha">
+                    
+
+    <!-- Matomo -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+
+        /* This code come from https://www.cnil.fr/sites/default/files/typo/document/Configuration_piwik.pdf */
+        _paq.push([function() {
+            var self = this;
+            function getOriginalVisitorCookieTimeout() {
+                var now = new Date(),
+                    nowTs = Math.round(now.getTime() / 1000),
+                    visitorInfo = self.getVisitorInfo();
+                var createTs = parseInt(visitorInfo[2]);
+                var cookieTimeout = 33696000; // 13 mois en secondes
+                return createTs + cookieTimeout - nowTs;
+            }
+            this.setVisitorCookieTimeout( getOriginalVisitorCookieTimeout() );
+        }]);
+
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['disableCookies']);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="https://stats.marne.fr//";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', 18]);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <!-- End Matomo Code -->
+
+        
+        <meta charset="utf-8">
+        <title>Etat civil - Recherche ciblée - Archives départementales de la Marne</title>
+
+        <meta name="twitter:card" content="summary" /><meta property="og:url" content="https://archives.marne.fr/search/form/6977c5eb-072c-470c-8dfa-6d6488a2d71e" /><meta property="og:title" content="Etat civil - Recherche ciblée" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"/>
+        <meta name="format-detection" content="telephone=no" />
+
+        
+                    <link rel="apple-touch-icon" sizes="180x180" href="/assets/src/application/Custom/assets/static/front/favicons/apple-touch-icon.ef9db261f6388f91a29d908034c3b032.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/src/application/Custom/assets/static/front/favicons/favicon-32x32.26366413dbe7eea2ef5adb31ca878872.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/src/application/Custom/assets/static/front/favicons/favicon-16x16.9576d0a447b4f8fa4e64dac76b614b7a.png">
+<link rel="manifest" href="/assets/src/application/Custom/assets/static/front/favicons/site.webmanifest.6ad2bd6962b36ccd88e1e053531ed9d5.json">
+<link rel="mask-icon" href="/assets/src/application/Custom/assets/static/front/favicons/safari-pinned-tab.ff29b8b31c8c9741ea20c69889196e12.svg" color="#5bbad5">
+
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+        
+        <link rel="stylesheet" type="text/css" href="/assets/assets/front/scss/common.3a564ca19cc28b973fb997541d232d88.css" />
+        <link rel="stylesheet" type="text/css" href="/assets/assets/fonts/index.0e20f316ab6f0bba53f85722bccd5491.css">
+
+            
+    <link rel="stylesheet" type="text/css" href="/assets/assets/front/scss/formulaire.5a6e766cd84ccbab175bbbb2fadcdf6d.css">
+
+        <link rel="stylesheet" type="text/css" href="/assets/src/application/Custom/assets/src/scss/index.22345e0d33605aef80d6a87a66e6b5d5.css" />
+        <link rel="stylesheet" type="text/css" href="/assets/node_modules/@knight-lab/timelinejs/dist/css/timeline.1f24a26632f1a70a920eae94a02df2a0.css" />
+
+    </head>
+    <body id="formulaire">
+
+                    <header id="header" role="banner">
+    <div class="institutional-banner-desktop">
+        
+    <div class="institutional-banner-burger">
+                    <div class="container institutional">
+        <div class="row">
+                            <div class="header-footer-col col-md-12 col-lg-6 header-footer-align-left">
+                    
+                    <ul class="links">
+            <li class="link
+">
+        <a href="http://www.marne.fr/"
+         title="Un site du Département de la Marne"                      rel="noopener noreferrer"            target="_blank"
+            >
+                            Un site du Département de la Marne
+            </a>
+    </li>
+    </ul>
+                </div>
+                            <div class="header-footer-col col-md-12 col-lg-6 header-footer-align-right">
+                    
+                    
+    <a href="http://www.marne.fr/"
+                             rel="noopener noreferrer"            target="_blank"
+            >
+            <img
+        src="/assets/src/application/Custom/assets/static/front/img/icono-logo/logo-institutional-header.db41c5251ee649751fa204592eb35150.svg"
+        title="Département de la Marne"        alt="Département de la Marne"    />
+
+    </a>
+                </div>
+                    </div>
+    </div>
+
+    </div>
+
+    </div>
+    <div id="main-header">
+        <a id="logo" href="/" title="Aller à la page d&#039;accueil">
+    <img class="logo-desktop" src="/assets/src/application/Custom/assets/static/front/img/icono-logo/logo-header.496d266d6c35b52accf898f038559850.svg" alt="Archives départementales de la Marne"/>
+
+        
+    <img class="logo-mobile" src="/assets/src/application/Custom/assets/static/front/img/icono-logo/logo-header.496d266d6c35b52accf898f038559850.svg" alt="Archives départementales de la Marne"/>
+
+    <span class="sr-only">Archives départementales de la Marne</span>
+</a>
+            
+<nav id="main-menu" role="navigation">
+            <ul aria-label="menu principal">
+                                    <li class="submenu-container"><a href="#">Rechercher</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/archives-numerisees"
+    title="Aller à la page : &quot;Archives numérisées&quot;"
+>Archives numérisées</a>
+</li>
+                    <li><a
+    href="/page/chercher-en-ligne"
+    title="Aller à la page : &quot;Chercher en ligne&quot;"
+>Chercher en ligne</a>
+</li>
+                    <li><a
+    href="/search/form/83ab14d5-e856-4a83-bf05-b46fdad2f01a"
+    title="Aller à la page : &quot;Chercher dans la bibliothèque&quot;"
+>Chercher dans la bibliothèque</a>
+</li>
+                    <li><a
+    href="/page/aides-a-la-recherche"
+    title="Aller à la page : &quot;Aides à la recherche&quot;"
+>Aides à la recherche</a>
+</li>
+            </ul>
+</li>
+                                <li class="submenu-container"><a href="#">Découvrir et enseigner</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/expositions"
+    title="Aller à la page : &quot;Expositions&quot;"
+>Expositions</a>
+</li>
+                    <li><a
+    href="/page/nos-expositions-virtuelles"
+    title="Aller à la page : &quot;Expositions virtuelles&quot;"
+>Expositions virtuelles</a>
+</li>
+                    <li><a
+    href="/page/le-service-educatif"
+    title="Aller à la page : &quot;Service éducatif&quot;"
+>Service éducatif</a>
+</li>
+                    <li><a
+    href="/page/tresors-d-archives"
+    title="Aller à la page : &quot;Trésors d&#039;archives&quot;"
+>Trésors d&#039;archives</a>
+</li>
+                    <li><a
+    href="/page/jeux"
+    title="Aller à la page : &quot;Jeux&quot;"
+>Jeux</a>
+</li>
+                    <li><a
+    href="/page/publications"
+    title="Aller à la page : &quot;Publications&quot;"
+>Publications</a>
+</li>
+                    <li><a
+    href="/page/actualites"
+    title="Aller à la page : &quot;Actualités&quot;"
+>Actualités</a>
+</li>
+            </ul>
+</li>
+                                <li class="submenu-container"><a href="#">Infos pratiques</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/qui-sommes-nous-"
+    title="Aller à la page : &quot;Qui sommes-nous ?&quot;"
+>Qui sommes-nous ?</a>
+</li>
+                    <li><a
+    href="/page/nous-rendre-visite"
+    title="Aller à la page : &quot;Nous rendre visite&quot;"
+>Nous rendre visite</a>
+</li>
+                    <li><a
+    href="/page/nos-deux-batiments"
+    title="Aller à la page : &quot;Nos deux bâtiments&quot;"
+>Nos deux bâtiments</a>
+</li>
+                    <li><a
+    href="/page/nos-salles-de-lecture"
+    title="Aller à la page : &quot;Nos salles de lecture&quot;"
+>Nos salles de lecture</a>
+</li>
+                    <li><a
+    href="/page/repartition-des-collections"
+    title="Aller à la page : &quot;Répartition des collections&quot;"
+>Répartition des collections</a>
+</li>
+                    <li><a
+    href="/page/reproduction-et-reutilisation"
+    title="Aller à la page : &quot;Reproduction et réutilisation&quot;"
+>Reproduction et réutilisation</a>
+</li>
+            </ul>
+</li>
+            
+        </ul>
+    </nav>
+<nav id="burger-main-menu" class="left" role="navigation">
+            <div>
+            <label for="burger-sidebar" class="toggle" aria-label="Ouvrir le menu déroulant">
+                <span class="sr-only">Ouvrir le menu déroulant</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </label>
+            <input type="checkbox" id="burger-sidebar" class="sidebartoggler">
+
+            <div class="page-wrap">
+                <div class="sidebar">
+                    <ul class="mainnav">
+                                                <li class="submenu-container"><a href="#">Rechercher</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/archives-numerisees"
+    title="Aller à la page : &quot;Archives numérisées&quot;"
+>Archives numérisées</a>
+</li>
+                    <li><a
+    href="/page/chercher-en-ligne"
+    title="Aller à la page : &quot;Chercher en ligne&quot;"
+>Chercher en ligne</a>
+</li>
+                    <li><a
+    href="/search/form/83ab14d5-e856-4a83-bf05-b46fdad2f01a"
+    title="Aller à la page : &quot;Chercher dans la bibliothèque&quot;"
+>Chercher dans la bibliothèque</a>
+</li>
+                    <li><a
+    href="/page/aides-a-la-recherche"
+    title="Aller à la page : &quot;Aides à la recherche&quot;"
+>Aides à la recherche</a>
+</li>
+            </ul>
+</li>
+                                <li class="submenu-container"><a href="#">Découvrir et enseigner</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/expositions"
+    title="Aller à la page : &quot;Expositions&quot;"
+>Expositions</a>
+</li>
+                    <li><a
+    href="/page/nos-expositions-virtuelles"
+    title="Aller à la page : &quot;Expositions virtuelles&quot;"
+>Expositions virtuelles</a>
+</li>
+                    <li><a
+    href="/page/le-service-educatif"
+    title="Aller à la page : &quot;Service éducatif&quot;"
+>Service éducatif</a>
+</li>
+                    <li><a
+    href="/page/tresors-d-archives"
+    title="Aller à la page : &quot;Trésors d&#039;archives&quot;"
+>Trésors d&#039;archives</a>
+</li>
+                    <li><a
+    href="/page/jeux"
+    title="Aller à la page : &quot;Jeux&quot;"
+>Jeux</a>
+</li>
+                    <li><a
+    href="/page/publications"
+    title="Aller à la page : &quot;Publications&quot;"
+>Publications</a>
+</li>
+                    <li><a
+    href="/page/actualites"
+    title="Aller à la page : &quot;Actualités&quot;"
+>Actualités</a>
+</li>
+            </ul>
+</li>
+                                <li class="submenu-container"><a href="#">Infos pratiques</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/qui-sommes-nous-"
+    title="Aller à la page : &quot;Qui sommes-nous ?&quot;"
+>Qui sommes-nous ?</a>
+</li>
+                    <li><a
+    href="/page/nous-rendre-visite"
+    title="Aller à la page : &quot;Nous rendre visite&quot;"
+>Nous rendre visite</a>
+</li>
+                    <li><a
+    href="/page/nos-deux-batiments"
+    title="Aller à la page : &quot;Nos deux bâtiments&quot;"
+>Nos deux bâtiments</a>
+</li>
+                    <li><a
+    href="/page/nos-salles-de-lecture"
+    title="Aller à la page : &quot;Nos salles de lecture&quot;"
+>Nos salles de lecture</a>
+</li>
+                    <li><a
+    href="/page/repartition-des-collections"
+    title="Aller à la page : &quot;Répartition des collections&quot;"
+>Répartition des collections</a>
+</li>
+                    <li><a
+    href="/page/reproduction-et-reutilisation"
+    title="Aller à la page : &quot;Reproduction et réutilisation&quot;"
+>Reproduction et réutilisation</a>
+</li>
+            </ul>
+</li>
+            
+                    </ul>
+                    
+    <div class="institutional-banner-burger">
+                    <div class="container institutional">
+        <div class="row">
+                            <div class="header-footer-col col-md-12 col-lg-6 header-footer-align-left">
+                    
+                    <ul class="links">
+            <li class="link
+">
+        <a href="http://www.marne.fr/"
+         title="Un site du Département de la Marne"                      rel="noopener noreferrer"            target="_blank"
+            >
+                            Un site du Département de la Marne
+            </a>
+    </li>
+    </ul>
+                </div>
+                            <div class="header-footer-col col-md-12 col-lg-6 header-footer-align-right">
+                    
+                    
+    <a href="http://www.marne.fr/"
+                             rel="noopener noreferrer"            target="_blank"
+            >
+            <img
+        src="/assets/src/application/Custom/assets/static/front/img/icono-logo/logo-institutional-header.db41c5251ee649751fa204592eb35150.svg"
+        title="Département de la Marne"        alt="Département de la Marne"    />
+
+    </a>
+                </div>
+                    </div>
+    </div>
+
+    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+<nav id="user-profile" role="navigation">
+    <ul>
+                    <li class="user-profile submenu-container">
+                            <a href="/user/login?targetRoute=front.search.form.view&amp;targetRouteParameters%5Buuid%5D=6977c5eb-072c-470c-8dfa-6d6488a2d71e" class="user-profile-icon-container" title="Mon espace personnel">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            </a>
+            <ul class="subnav">
+                <li>
+                    <a href="/user/login?targetRoute=front.search.form.view&amp;targetRouteParameters%5Buuid%5D=6977c5eb-072c-470c-8dfa-6d6488a2d71e" title="Se connecter">Se connecter</a>
+                </li>
+                                    <li>
+                        <a href="/register" title="S&#039;inscrire">S&#039;inscrire</a>
+                    </li>
+                            </ul>
+
+                </li>
+    
+    </ul>
+</nav>
+<nav id="burger-user-profile" class="right" role="navigation">
+    <label for="profile-sidebar" class="toggle">
+                    <i class="fa fa-user-circle-o user-profile-icon " aria-hidden="true"></i>
+    
+    </label>
+    <input type="checkbox" id="profile-sidebar" class="sidebartoggler">
+
+    <div class="page-wrap">
+        <div class="sidebar">
+            <ul class="mainnav">
+                                                <li>
+                <a href="/user/login?targetRoute=front.search.form.view&amp;targetRouteParameters%5Buuid%5D=6977c5eb-072c-470c-8dfa-6d6488a2d71e" title="Se connecter">Se connecter</a>
+            </li>
+                            <li>
+                    <a href="/register" title="S&#039;inscrire">S&#039;inscrire</a>
+                </li>
+                        
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    </div>
+</header>
+        
+        <div id="old-browsers" class="disclaimer">
+    <div class="text">
+        Ce portail est conçu pour être utilisé sur les navigateurs Chrome, Firefox, Safari et Edge. Pour une expérience optimale, nous vous invitons à utiliser l&#039;un de ces navigateurs.
+    </div>
+    <div class="buttons">
+        <button type="button" class="btn btn-primary" id="old-browsers-accept">J&#039;ai compris</button>
+    </div>
+</div>
+
+        <main role="main" id="page-top">
+
+                                        
+            
+            
+                            
+            
+                            
+<aside class="alert-container row">
+</aside>
+            
+            <div class="container">
+                    <div class="row">
+        <div class="presentation col-md-7 editorial-content">
+            <h1>Etat civil</h1>
+            <div data-richtext="{&quot;blocks&quot;:[{&quot;key&quot;:&quot;rejf&quot;,&quot;text&quot;:&quot;La recherche porte sur les registres paroissiaux et d&#039;état civil des communes de la Marne du XVIe siècle jusqu&#039;aux deux ou trois premières décennies du XXe siècle en général.&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;1jknf&quot;,&quot;text&quot;:&quot;&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;d0gnf&quot;,&quot;text&quot;:&quot;Dans nos deux salles de lecture, les images sont consultables jusqu&#039;en 1929, 1932 ou 1942 selon le cas.&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;5ctat&quot;,&quot;text&quot;:&quot;&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;1o3mu&quot;,&quot;text&quot;:&quot;Pour plus d&#039;informations (listes des communes concernées, dates limites...), voir l’aide à la recherche.&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[{&quot;offset&quot;:82,&quot;length&quot;:21,&quot;style&quot;:&quot;BOLD&quot;}],&quot;entityRanges&quot;:[{&quot;offset&quot;:82,&quot;length&quot;:21,&quot;key&quot;:0}],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;71s7e&quot;,&quot;text&quot;:&quot;&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;1vpsv&quot;,&quot;text&quot;:&quot;Voir l&#039;actualité du 7 juillet 2026 sur des corrections de lacunes&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[{&quot;offset&quot;:43,&quot;length&quot;:22,&quot;style&quot;:&quot;BOLD&quot;}],&quot;entityRanges&quot;:[{&quot;offset&quot;:43,&quot;length&quot;:22,&quot;key&quot;:1}],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;fqfeu&quot;,&quot;text&quot;:&quot;&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;3ohgl&quot;,&quot;text&quot;:&quot;Pour les actes antérieurs à 1902, les Archives ont fait numériser en priorité la collection des greffes, et l&#039;ont complétée, en cas de lacune, par la collection communale. Il peut donc arriver que les dates de deux registres se chevauchent.&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;e9tp9&quot;,&quot;text&quot;:&quot;&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;sgh8&quot;,&quot;text&quot;:&quot;En cas de manque manifeste d&#039;image à l&#039;intérieur d&#039;un registre numérisé, vous pouvez nous signaler cette erreur de reproduction afin qu&#039;elle soit corrigée.&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[{&quot;offset&quot;:73,&quot;length&quot;:54,&quot;style&quot;:&quot;BOLD&quot;}],&quot;entityRanges&quot;:[{&quot;offset&quot;:73,&quot;length&quot;:54,&quot;key&quot;:2}],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;behir&quot;,&quot;text&quot;:&quot;&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;1t8ei&quot;,&quot;text&quot;:&quot;En savoir plus : &quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;feco6&quot;,&quot;text&quot;:&quot;Lire l&#039;aide à la recherche et la présentation de l&#039;état civil&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[{&quot;offset&quot;:0,&quot;length&quot;:61,&quot;style&quot;:&quot;BOLD&quot;}],&quot;entityRanges&quot;:[{&quot;offset&quot;:0,&quot;length&quot;:61,&quot;key&quot;:3}],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;5eecl&quot;,&quot;text&quot;:&quot;Consulter le guide des communes de la Marne qui indique les changements de noms de communes et les fusions de communes&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[{&quot;offset&quot;:22,&quot;length&quot;:22,&quot;style&quot;:&quot;BOLD&quot;}],&quot;entityRanges&quot;:[{&quot;offset&quot;:23,&quot;length&quot;:20,&quot;key&quot;:4}],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;f54ac&quot;,&quot;text&quot;:&quot;&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;19tt9&quot;,&quot;text&quot;:&quot;Autres ressources en ligne utiles à la généalogie :&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;bsp3l&quot;,&quot;text&quot;:&quot;les recensements de population&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[{&quot;offset&quot;:0,&quot;length&quot;:30,&quot;style&quot;:&quot;BOLD&quot;}],&quot;entityRanges&quot;:[{&quot;offset&quot;:0,&quot;length&quot;:30,&quot;key&quot;:5}],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;d0k6r&quot;,&quot;text&quot;:&quot;les registres matricules militaires&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[{&quot;offset&quot;:0,&quot;length&quot;:35,&quot;style&quot;:&quot;BOLD&quot;}],&quot;entityRanges&quot;:[{&quot;offset&quot;:0,&quot;length&quot;:35,&quot;key&quot;:6}],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}},{&quot;key&quot;:&quot;bamm8&quot;,&quot;text&quot;:&quot;&quot;,&quot;type&quot;:&quot;unstyled&quot;,&quot;depth&quot;:0,&quot;inlineStyleRanges&quot;:[],&quot;entityRanges&quot;:[],&quot;data&quot;:{&quot;align&quot;:&quot;text-left&quot;}}],&quot;entityMap&quot;:{&quot;0&quot;:{&quot;type&quot;:&quot;LINK&quot;,&quot;mutability&quot;:&quot;MUTABLE&quot;,&quot;data&quot;:{&quot;type&quot;:&quot;external-link&quot;,&quot;target&quot;:&quot;/page/etat-civil-presentation-et-aide-a-la-recherche&quot;,&quot;openInNewWindow&quot;:false,&quot;title&quot;:&quot;Etat civil : présentation et aide à la recherche&quot;}},&quot;1&quot;:{&quot;type&quot;:&quot;LINK&quot;,&quot;mutability&quot;:&quot;MUTABLE&quot;,&quot;data&quot;:{&quot;target&quot;:&quot;/page/plus-de-3000-images-pour-combler-des-lacunes-dans-les-collections-de-l-etat-civil-et-des-recensements-de-population&quot;,&quot;openInNewWindow&quot;:false,&quot;title&quot;:&quot;Corrections de lacunes sur l&#039;état civil&quot;}},&quot;2&quot;:{&quot;type&quot;:&quot;LINK&quot;,&quot;mutability&quot;:&quot;MUTABLE&quot;,&quot;data&quot;:{&quot;type&quot;:&quot;external-link&quot;,&quot;target&quot;:&quot;/editorial/page/9e06cd90-41ab-423a-9735-60d36db5ecf8&quot;,&quot;openInNewWindow&quot;:false,&quot;title&quot;:&quot;&quot;}},&quot;3&quot;:{&quot;type&quot;:&quot;LINK&quot;,&quot;mutability&quot;:&quot;MUTABLE&quot;,&quot;data&quot;:{&quot;type&quot;:&quot;external-link&quot;,&quot;target&quot;:&quot;/page/etat-civil-presentation-et-aide-a-la-recherche&quot;,&quot;openInNewWindow&quot;:false,&quot;title&quot;:&quot;Etat civil : présentation et aide à la recherche&quot;}},&quot;4&quot;:{&quot;type&quot;:&quot;LINK&quot;,&quot;mutability&quot;:&quot;MUTABLE&quot;,&quot;data&quot;:{&quot;type&quot;:&quot;external-link&quot;,&quot;target&quot;:&quot;/page/communes-de-la-marne&quot;,&quot;openInNewWindow&quot;:false,&quot;title&quot;:&quot;Communes de la Marne&quot;}},&quot;5&quot;:{&quot;type&quot;:&quot;LINK&quot;,&quot;mutability&quot;:&quot;MUTABLE&quot;,&quot;data&quot;:{&quot;type&quot;:&quot;external-link&quot;,&quot;target&quot;:&quot;/search/form/8a424970-6f86-42fb-9b5c-29f14e120f18&quot;,&quot;openInNewWindow&quot;:false,&quot;title&quot;:&quot;Formulaire de recherche sur les recensements de population&quot;}},&quot;6&quot;:{&quot;type&quot;:&quot;LINK&quot;,&quot;mutability&quot;:&quot;MUTABLE&quot;,&quot;data&quot;:{&quot;target&quot;:&quot;/page/matricules-militaires-classes-1878-1924&quot;,&quot;openInNewWindow&quot;:false,&quot;title&quot;:&quot;Recherche nominative sur les registres matricules militaires&quot;}}}}"></div>
+        </div>
+        <div class="form col-md-5">
+            <form id="form-search-advanced-search" method="get" action="/search/results">
+                <input type="hidden" value="6977c5eb-072c-470c-8dfa-6d6488a2d71e" name="formUuid"/>
+                <input type="hidden" value="date_asc" name="sort"/>
+                <input type="hidden" value="table" name="mode"/>
+                
+                                    <div class="form-group">
+                            <label class="col-12" for="0-controlledAccessGeographicName">Commune</label>
+    <div class="row">
+        <div class="col-12">
+                            <div
+                    class="enhanced-select multiselect"
+                    data-input-id="0-controlledAccessGeographicName"
+                    data-name="0-controlledAccessGeographicName"
+                    data-options="[&quot;Ablancourt (Marne, France)&quot;,&quot;Ablois (Marne ; ancienne commune)&quot;,&quot;Aigny (Marne, France)&quot;,&quot;Allemanche-Launay (Marne ; ancienne commune)&quot;,&quot;Allemanche-Launay-et-Soyer (Marne, France)&quot;,&quot;Allemant (Marne, France)&quot;,&quot;Alliancelles (Marne, France)&quot;,&quot;Ambonnay (Marne, France)&quot;,&quot;Ambri\u00e8res (Marne, France)&quot;,&quot;Anglure (Marne, France)&quot;,&quot;Angluzelles-et-Courcelles (Marne, France)&quot;,&quot;Ante (Marne ; ancienne commune)&quot;,&quot;Anthenay (Marne, France)&quot;,&quot;Aougny (Marne, France)&quot;,&quot;Arcis-le-Ponsart (Marne, France)&quot;,&quot;Argers (Marne, France)&quot;,&quot;Arrigny (Marne, France)&quot;,&quot;Arzilli\u00e8res (Marne ; ancienne commune)&quot;,&quot;Arzilli\u00e8res-Neuville (Marne, France)&quot;,&quot;Athis (Marne, France)&quot;,&quot;Aub\u00e9rive (Marne, France)&quot;,&quot;Aubilly (Marne, France)&quot;,&quot;Aulnay-aux-Planches (Marne ; ancienne commune)&quot;,&quot;Aulnay-l&#039;A\u00eetre (Marne, France)&quot;,&quot;Aulnay-sur-Marne (Marne, France)&quot;,&quot;Aulnizeux (Marne ; ancienne commune)&quot;,&quot;Aum\u00e9nancourt (Marne, France)&quot;,&quot;Aum\u00e9nancourt-le-Grand (Marne ; ancienne commune)&quot;,&quot;Aum\u00e9nancourt-le-Petit (Marne ; ancienne commune)&quot;,&quot;Auve (Marne, France)&quot;,&quot;Avenay (Marne ; ancienne commune)&quot;,&quot;Avenay-Val-d&#039;Or (Marne, France)&quot;,&quot;Avize (Marne, France)&quot;,&quot;Ay (Marne, France)&quot;,&quot;Baconnes (Marne, France)&quot;,&quot;Bagneux (Marne, France)&quot;,&quot;Baizil (Le) (Marne, France)&quot;,&quot;Bannay (Marne, France)&quot;,&quot;Bannes (Marne, France)&quot;,&quot;Barbonne (Marne ; ancienne commune)&quot;,&quot;Barbonne-Fayel (Marne, France)&quot;,&quot;Baslieux-l\u00e8s-Fismes (Marne, France)&quot;,&quot;Baslieux-sous-Ch\u00e2tillon (Marne, France)&quot;,&quot;Bassu (Marne, France)&quot;,&quot;Bassuet (Marne, France)&quot;,&quot;Baudement (Marne, France)&quot;,&quot;Baye (Marne, France)&quot;,&quot;Bazancourt (Marne, France)&quot;,&quot;Beaumont-sur-Vesle (Marne, France)&quot;,&quot;Beaunay (Marne, France)&quot;,&quot;Beine (Marne ; ancienne commune)&quot;,&quot;Beine-Nauroy (Marne, France)&quot;,&quot;Bellay (Marne ; ancienne commune)&quot;,&quot;Belval-en-Argonne (Marne, France)&quot;,&quot;Belval-sous-Ch\u00e2tillon (Marne, France)&quot;,&quot;Belval-sous-Hans (Marne ; ancienne commune)&quot;,&quot;Berg\u00e8res-l\u00e8s-Vertus (Marne, France)&quot;,&quot;Berg\u00e8res-sous-Montmirail (Marne, France)&quot;,&quot;Berm\u00e9ricourt (Marne, France)&quot;,&quot;Berru (Marne, France)&quot;,&quot;Berzieux (Marne, France)&quot;,&quot;B\u00e9theniville (Marne, France)&quot;,&quot;B\u00e9theny (Marne, France)&quot;,&quot;Bethon (Marne, France)&quot;,&quot;Bettancourt-la-Longue (Marne, France)&quot;,&quot;Bezannes (Marne, France)&quot;,&quot;Bierges (Marne ; ancienne commune)&quot;,&quot;Bignicourt-sur-Marne (Marne, France)&quot;,&quot;Bignicourt-sur-Saulx (Marne, France)&quot;,&quot;Billy-le-Grand (Marne, France)&quot;,&quot;Binarville (Marne, France)&quot;,&quot;Binson-et-Orquigny (Marne, France)&quot;,&quot;Bisseuil (Marne, France)&quot;,&quot;Blacy (Marne, France)&quot;,&quot;Blaise-sous-Arzilli\u00e8res (Marne, France)&quot;,&quot;Blaise-sous-Hauteville (Marne ; ancienne commune)&quot;,&quot;Blesme (Marne, France)&quot;,&quot;Bligny (Marne, France)&quot;,&quot;Boissy-le-Repos (Marne, France)&quot;,&quot;Bouchy-le-Repos (Marne ; ancienne commune)&quot;,&quot;Bouchy-Saint-Genest (Marne, France)&quot;,&quot;Bouilly (Marne, France)&quot;,&quot;Bouleuse (Marne, France)&quot;,&quot;Boult-sur-Suippe (Marne, France)&quot;,&quot;Bourgogne (Marne, France)&quot;,&quot;Boursault (Marne, France)&quot;,&quot;Bouvancourt (Marne, France)&quot;,&quot;Bouy (Marne, France)&quot;,&quot;Bouzy (Marne, France)&quot;,&quot;Brandonvillers (Marne, France)&quot;,&quot;Branscourt (Marne, France)&quot;,&quot;Braux-Sainte-Cohi\u00e8re (Marne, France)&quot;,&quot;Braux-Saint-Remy (Marne, France)&quot;,&quot;Br\u00e9ban (Marne, France)&quot;,&quot;Breuil (Le) (Marne, France)&quot;,&quot;Breuil-sur-Vesle (Marne, France)&quot;,&quot;Breuvery-sur-Coole (Marne, France)&quot;,&quot;Bricot-la-Ville (Marne ; ancienne commune)&quot;,&quot;Brimont (Marne, France)&quot;,&quot;Brouillet (Marne, France)&quot;,&quot;Broussy-le-Grand (Marne, France)&quot;,&quot;Broussy-le-Petit (Marne, France)&quot;,&quot;Broyes (Marne, France)&quot;,&quot;Brugny (Marne ; ancienne commune)&quot;,&quot;Brugny-Vaudancourt (Marne, France)&quot;,&quot;Brusson (Marne, France)&quot;,&quot;Buisson (Le) (Marne, France)&quot;,&quot;Bussy-aux-Bois (Marne ; ancienne commune)&quot;,&quot;Bussy-le-Ch\u00e2teau (Marne, France)&quot;,&quot;Bussy-le-Repos (Marne, France)&quot;,&quot;Bussy-Lettr\u00e9e (Marne, France)&quot;,&quot;Caure (La) (Marne, France)&quot;,&quot;Caurel (Marne, France)&quot;,&quot;Cauroy-l\u00e8s-Hermonville (Marne, France)&quot;,&quot;Celle-sous-Chantemerle (La) (Marne, France)&quot;,&quot;Cernay-en-Dormois (Marne, France)&quot;,&quot;Cernay-l\u00e8s-Reims (Marne, France)&quot;,&quot;Cernon (Marne, France)&quot;,&quot;Chaintrix (Marne ; ancienne commune)&quot;,&quot;Chaintrix-Bierges (Marne, France)&quot;,&quot;Ch\u00e2lons-en-Champagne (Marne, France)&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne ; ancienne commune)&quot;,&quot;Ch\u00e2lons-sur-Vesle (Marne, France)&quot;,&quot;Chaltrait (Marne, France)&quot;,&quot;Chambrecy (Marne, France)&quot;,&quot;Chamery (Marne, France)&quot;,&quot;Champagne (Marne ; ancienne commune)&quot;,&quot;Champaubert (Marne, France)&quot;,&quot;Champaubert-aux-Bois (Marne ; ancienne commune)&quot;,&quot;Champfleury (Marne, France)&quot;,&quot;Champguyon (Marne, France)&quot;,&quot;Champigneul (Marne ; ancienne commune)&quot;,&quot;Champigneul-Champagne (Marne, France)&quot;,&quot;Champigneul-\u00c9cury-le-Petit (Marne ; ancienne commune)&quot;,&quot;Champigny (Marne, France)&quot;,&quot;Champillon (Marne, France)&quot;,&quot;Champlat-et-Boujacourt (Marne, France)&quot;,&quot;Champvoisy (Marne, France)&quot;,&quot;Changy (Marne, France)&quot;,&quot;Chantecoq (Marne ; ancienne commune)&quot;,&quot;Chantemerle (Marne, France)&quot;,&quot;Chapelaine (Marne, France)&quot;,&quot;Chapelle-Felcourt (La) (Marne, France)&quot;,&quot;Chapelle-Lasson (La) (Marne, France)&quot;,&quot;Chapelle-sous-Orbais (La) (Marne, France)&quot;,&quot;Chapelle-sur-Auve (La) (Marne ; ancienne commune)&quot;,&quot;Charleville (Marne, France)&quot;,&quot;Charmont (Marne, France)&quot;,&quot;Charmontois (Les) (Marne, France)&quot;,&quot;Charmontois-l&#039;Abb\u00e9 (Marne ; ancienne commune)&quot;,&quot;Charmontois-le-Roi (Marne ; ancienne commune)&quot;,&quot;Ch\u00e2telier (Le) (Marne, France)&quot;,&quot;Ch\u00e2telraould (Marne ; ancienne commune)&quot;,&quot;Ch\u00e2telraould-Saint-Louvent (Marne, France)&quot;,&quot;Ch\u00e2tillon-sur-Brou\u00e9 (Marne, France)&quot;,&quot;Ch\u00e2tillon-sur-Marne (Marne, France)&quot;,&quot;Ch\u00e2tillon-sur-Morin (Marne, France)&quot;,&quot;Ch\u00e2trices (Marne, France)&quot;,&quot;Chaudefontaine (Marne, France)&quot;,&quot;Chaumuzy (Marne, France)&quot;,&quot;Chauss\u00e9e (La) (Marne ; ancienne commune)&quot;,&quot;Chauss\u00e9e-sur-Marne (La) (Marne, France)&quot;,&quot;Chavot (Marne ; ancienne commune)&quot;,&quot;Chavot-Courcourt (Marne, France)&quot;,&quot;Chemin (Le) (Marne, France)&quot;,&quot;Cheminon (Marne, France)&quot;,&quot;Chenay (Marne, France)&quot;,&quot;Cheniers (Marne, France)&quot;,&quot;Cheppe (La) (Marne, France)&quot;,&quot;Cheppes (Marne ; ancienne commune)&quot;,&quot;Cheppes-la-Prairie (Marne, France)&quot;,&quot;Chepy (Marne, France)&quot;,&quot;Cherville (Marne, France)&quot;,&quot;Chevigny (Marne ; ancienne commune)&quot;,&quot;Chichey (Marne, France)&quot;,&quot;Chigny (Marne ; ancienne commune)&quot;,&quot;Chigny-les-Roses (Marne, France)&quot;,&quot;Chouilly (Marne, France)&quot;,&quot;Clamanges (Marne, France)&quot;,&quot;Clesles (Marne, France)&quot;,&quot;Cloyes-sur-Marne (Marne, France)&quot;,&quot;Coizard (Marne ; ancienne commune)&quot;,&quot;Coizard-Joches (Marne, France)&quot;,&quot;Coligny (Marne ; ancienne commune)&quot;,&quot;Comblizy (Marne ; ancienne commune)&quot;,&quot;Compertrix (Marne, France)&quot;,&quot;Cond\u00e9-sur-Marne (Marne, France)&quot;,&quot;Conflans (Marne ; ancienne commune)&quot;,&quot;Conflans-sur-Seine (Marne, France)&quot;,&quot;Congy (Marne, France)&quot;,&quot;Connantray (Marne ; ancienne commune)&quot;,&quot;Connantray-Vaurefroy (Marne, France)&quot;,&quot;Connantre (Marne, France)&quot;,&quot;Contault (Marne, France)&quot;,&quot;Coole (Marne, France)&quot;,&quot;Coolus (Marne, France)&quot;,&quot;Corbeil (Marne, France)&quot;,&quot;Corf\u00e9lix (Marne, France)&quot;,&quot;Cormicy (Marne, France)&quot;,&quot;Cormontreuil (Marne, France)&quot;,&quot;Cormoyeux (Marne, France)&quot;,&quot;Cormoyeux-Romery (Marne ; ancienne commune)&quot;,&quot;Corribert (Marne, France)&quot;,&quot;Corrobert (Marne, France)&quot;,&quot;Corroy (Marne, France)&quot;,&quot;Coulommes (Marne ; ancienne commune)&quot;,&quot;Coulommes-la-Montagne (Marne, France)&quot;,&quot;Coupetz (Marne, France)&quot;,&quot;Coup\u00e9ville (Marne, France)&quot;,&quot;Courbetaux (Marne ; ancienne commune)&quot;,&quot;Courcelles-l\u00e8s-Rosnay (Marne ; ancienne commune)&quot;,&quot;Courcelles-Sapicourt (Marne, France)&quot;,&quot;Courcemain (Marne, France)&quot;,&quot;Courcy (Marne, France)&quot;,&quot;Courcy-La-Neuvillette (Marne ; ancienne commune)&quot;,&quot;Courdemanges (Marne, France)&quot;,&quot;Courgivaux (Marne, France)&quot;,&quot;Courjeonnet (Marne, France)&quot;,&quot;Courlandon (Marne, France)&quot;,&quot;Courmas (Marne, France)&quot;,&quot;Courmelois (Marne ; ancienne commune)&quot;,&quot;Courtagnon (Marne, France)&quot;,&quot;Court\u00e9mont (Marne, France)&quot;,&quot;Courthi\u00e9zy (Marne, France)&quot;,&quot;Courtisols (Marne, France)&quot;,&quot;Courville (Marne, France)&quot;,&quot;Couvrot (Marne, France)&quot;,&quot;Cramant (Marne, France)&quot;,&quot;Croix-en-Champagne (La) (Marne, France)&quot;,&quot;Crugny (Marne, France)&quot;,&quot;Cuchery (Marne, France)&quot;,&quot;Cuis (Marne, France)&quot;,&quot;Cuisles (Marne, France)&quot;,&quot;Cumi\u00e8res (Marne, France)&quot;,&quot;Cuperly (Marne, France)&quot;,&quot;Damery (Marne, France)&quot;,&quot;Dampierre-au-Temple (Marne, France)&quot;,&quot;Dampierre-le-Ch\u00e2teau (Marne, France)&quot;,&quot;Dampierre-sur-Auve (Marne ; ancienne commune)&quot;,&quot;Dampierre-sur-Moivre (Marne, France)&quot;,&quot;Daucourt (Marne ; ancienne commune)&quot;,&quot;Dizy (Marne, France)&quot;,&quot;Dizy-Magenta (Marne ; ancienne commune)&quot;,&quot;Dizy-sur-Marne (Marne ; ancienne commune)&quot;,&quot;Dommartin-Dampierre (Marne, France)&quot;,&quot;Dommartin-la-Planchette (Marne ; ancienne commune)&quot;,&quot;Dommartin-Lettr\u00e9e (Marne, France)&quot;,&quot;Dommartin-sous-Hans (Marne, France)&quot;,&quot;Dommartin-sur-Y\u00e8vre (Marne ; ancienne commune)&quot;,&quot;Dommartin-Varimont (Marne, France)&quot;,&quot;Dompremy (Marne, France)&quot;,&quot;Domprot (Marne ; ancienne commune)&quot;,&quot;Dontrien (Marne, France)&quot;,&quot;Dormans (Marne, France)&quot;,&quot;Doucey (Marne ; ancienne commune)&quot;,&quot;Drosnay (Marne, France)&quot;,&quot;Drouilly (Marne, France)&quot;,&quot;\u00c9chelle (L&#039;) (Marne ; ancienne commune)&quot;,&quot;\u00c9claires (Marne, France)&quot;,&quot;\u00c9claron-Braucourt-Sainte-Livi\u00e8re (Haute-Marne, France)&quot;,&quot;\u00c9collemont (Marne, France)&quot;,&quot;\u00c9criennes (Marne, France)&quot;,&quot;\u00c9cueil (Marne, France)&quot;,&quot;\u00c9cury-le-Petit (Marne ; ancienne commune)&quot;,&quot;\u00c9cury-le-Repos (Marne, France)&quot;,&quot;\u00c9cury-sur-Coole (Marne, France)&quot;,&quot;\u00c9lise (Marne ; ancienne commune)&quot;,&quot;\u00c9lise-Daucourt (Marne, France)&quot;,&quot;\u00c9pense (Marne, France)&quot;,&quot;\u00c9pernay (Marne, France)&quot;,&quot;\u00c9pine (L&#039;) (Marne, France)&quot;,&quot;\u00c9poye (Marne, France)&quot;,&quot;Escardes (Marne, France)&quot;,&quot;Esclavolles (Marne ; ancienne commune)&quot;,&quot;Esclavolles-Lurey (Marne, France)&quot;,&quot;Essarts-l\u00e8s-S\u00e9zanne (Les) (Marne, France)&quot;,&quot;Essarts-le-Vicomte (Les) (Marne, France)&quot;,&quot;Esternay (Marne, France)&quot;,&quot;\u00c9toges (Marne, France)&quot;,&quot;\u00c9tr\u00e9chy (Marne, France)&quot;,&quot;\u00c9trepy (Marne, France)&quot;,&quot;Euvy (Marne, France)&quot;,&quot;Fagni\u00e8res (Marne, France)&quot;,&quot;Far\u00e9mont (Marne ; ancienne commune)&quot;,&quot;Faux-Fresnay (Marne, France)&quot;,&quot;Faux-sur-Coole (Marne ; ancienne commune)&quot;,&quot;Faux-V\u00e9signeul (Marne, France)&quot;,&quot;Faverolles (Marne ; ancienne commune)&quot;,&quot;Faverolles-et-Co\u00ebmy (Marne, France)&quot;,&quot;Favresse (Marne, France)&quot;,&quot;Fayel (Marne ; ancienne commune)&quot;,&quot;F\u00e8rebrianges (Marne, France)&quot;,&quot;F\u00e8re-Champenoise (Marne, France)&quot;,&quot;Festigny (Marne, France)&quot;,&quot;Fismes (Marne, France)&quot;,&quot;Flavigny (Marne, France)&quot;,&quot;Fleury-la-Rivi\u00e8re (Marne, France)&quot;,&quot;Florent (Marne ; ancienne commune)&quot;,&quot;Florent-en-Argonne (Marne, France)&quot;,&quot;Fontaine-Denis (Marne ; ancienne commune)&quot;,&quot;Fontaine-Denis-Nuisy (Marne, France)&quot;,&quot;Fontaine-en-Dormois (Marne, France)&quot;,&quot;Fontaine-sur-Ay (Marne, France)&quot;,&quot;Fontaine-sur-Coole (Marne ; ancienne commune)&quot;,&quot;Foresti\u00e8re (La) (Marne, France)&quot;,&quot;Francheville (Marne, France)&quot;,&quot;Fresne (Le) (Marne, France)&quot;,&quot;Fresne-l\u00e8s-Reims (Marne, France)&quot;,&quot;Fresnes (Marne ; ancienne commune)&quot;,&quot;Frignicourt (Marne, France)&quot;,&quot;Fromenti\u00e8res (Marne, France)&quot;,&quot;Gault (Le) (Marne ; ancienne commune)&quot;,&quot;Gault-Soigny (Le) (Marne, France)&quot;,&quot;Gaye (Marne, France)&quot;,&quot;Germaine (Marne, France)&quot;,&quot;Germigny (Marne, France)&quot;,&quot;Germinon (Marne, France)&quot;,&quot;Giffaumont (Marne ; ancienne commune)&quot;,&quot;Giffaumont-Champaubert (Marne, France)&quot;,&quot;Gigny-aux-Bois (Marne ; ancienne commune)&quot;,&quot;Gigny-Bussy (Marne, France)&quot;,&quot;Gionges (Marne, France)&quot;,&quot;Givry-en-Argonne (Marne, France)&quot;,&quot;Givry-l\u00e8s-Loisy (Marne, France)&quot;,&quot;Gizaucourt (Marne, France)&quot;,&quot;Glannes (Marne, France)&quot;,&quot;Goncourt (Marne ; ancienne commune)&quot;,&quot;Gourgan\u00e7on (Marne, France)&quot;,&quot;Grandes-C\u00f4tes (Les) (Marne ; ancienne commune)&quot;,&quot;Grandes-Loges (Les) (Marne, France)&quot;,&quot;Granges-sur-Aube (Marne, France)&quot;,&quot;Gratreuil (Marne, France)&quot;,&quot;Grauves (Marne, France)&quot;,&quot;Gueux (Marne, France)&quot;,&quot;Hancourt (Marne ; ancienne commune)&quot;,&quot;Hans (Marne, France)&quot;,&quot;Haussign\u00e9mont (Marne, France)&quot;,&quot;Haussimont (Marne, France)&quot;,&quot;Hauteville (Marne, France)&quot;,&quot;Hautvillers (Marne, France)&quot;,&quot;Heiltz-le-Hutier (Marne, France)&quot;,&quot;Heiltz-le-Maurupt (Marne, France)&quot;,&quot;Heiltz-l&#039;\u00c9v\u00eaque (Marne, France)&quot;,&quot;Henruel (Marne ; ancienne commune)&quot;,&quot;Hermonville (Marne, France)&quot;,&quot;Herpont (Marne, France)&quot;,&quot;Heutr\u00e9giville (Marne, France)&quot;,&quot;Hourges (Marne, France)&quot;,&quot;Huiron (Marne, France)&quot;,&quot;Humbauville (Marne, France)&quot;,&quot;Hurlus (Marne ; ancienne commune)&quot;,&quot;Igny-Comblizy (Marne, France)&quot;,&quot;Igny-le-Jard (Marne ; ancienne commune)&quot;,&quot;Isles-sur-Suippe (Marne, France)&quot;,&quot;Isle-sur-Marne (Marne, France)&quot;,&quot;Isse (Marne, France)&quot;,&quot;Isson (Marne ; ancienne commune)&quot;,&quot;Istres-et-Bury (Les) (Marne, France)&quot;,&quot;J\u00e2lons (Marne, France)&quot;,&quot;Janvilliers (Marne, France)&quot;,&quot;Janvry (Marne, France)&quot;,&quot;Joches (Marne ; ancienne commune)&quot;,&quot;Joiselle (Marne, France)&quot;,&quot;Jonchery-sur-Suippe (Marne, France)&quot;,&quot;Jonchery-sur-Vesle (Marne, France)&quot;,&quot;Jonquery (Marne, France)&quot;,&quot;Jouy (Marne ; ancienne commune)&quot;,&quot;Jouy-l\u00e8s-Reims (Marne, France)&quot;,&quot;Jussecourt (Marne ; ancienne commune)&quot;,&quot;Jussecourt-Minecourt (Marne, France)&quot;,&quot;Juvigny (Marne, France)&quot;,&quot;Lachy (Marne, France)&quot;,&quot;Lagery (Marne, France)&quot;,&quot;Landricourt (Marne, France)&quot;,&quot;Larzicourt (Marne, France)&quot;,&quot;Laval (Marne ; ancienne commune)&quot;,&quot;Laval-sur-Tourbe (Marne, France)&quot;,&quot;Lavannes (Marne, France)&quot;,&quot;Lenharr\u00e9e (Marne, France)&quot;,&quot;Leuvrigny (Marne, France)&quot;,&quot;Lh\u00e9ry (Marne, France)&quot;,&quot;Lignon (Marne, France)&quot;,&quot;Linthelles (Marne, France)&quot;,&quot;Linthes (Marne, France)&quot;,&quot;Lisse (Marne ; ancienne commune)&quot;,&quot;Lisse-en-Champagne (Marne, France)&quot;,&quot;Livry-Louvercy (Marne, France)&quot;,&quot;Livry-sur-Vesle (Marne ; ancienne commune)&quot;,&quot;Loisy-en-Brie (Marne, France)&quot;,&quot;Loisy-sur-Marne (Marne, France)&quot;,&quot;Loivre (Marne, France)&quot;,&quot;Louvercy (Marne ; ancienne commune)&quot;,&quot;Louvois (Marne, France)&quot;,&quot;Lucy (Marne ; ancienne commune)&quot;,&quot;Ludes (Marne, France)&quot;,&quot;Lurey (Marne ; ancienne commune)&quot;,&quot;Lux\u00e9mont (Marne ; ancienne commune)&quot;,&quot;Lux\u00e9mont-et-Villotte (Marne, France)&quot;,&quot;Maclaunay (Marne ; ancienne commune)&quot;,&quot;Maffr\u00e9court (Marne, France)&quot;,&quot;Magenta (Marne, France)&quot;,&quot;Magneux (Marne, France)&quot;,&quot;Mailly (Marne ; ancienne commune)&quot;,&quot;Mailly-Champagne (Marne, France)&quot;,&quot;Mairy-sur-Marne (Marne, France)&quot;,&quot;Maisons-en-Champagne (Marne, France)&quot;,&quot;Malmy (Marne, France)&quot;,&quot;Mancy (Marne, France)&quot;,&quot;Marcilly-sur-Seine (Marne, France)&quot;,&quot;Mardeuil (Marne, France)&quot;,&quot;Mareuil-en-Brie (Marne, France)&quot;,&quot;Mareuil-le-Port (Marne, France)&quot;,&quot;Mareuil-sur-Ay (Marne, France)&quot;,&quot;Marfaux (Marne, France)&quot;,&quot;Margerie (Marne ; ancienne commune)&quot;,&quot;Margerie-Hancourt (Marne, France)&quot;,&quot;Margny (Marne, France)&quot;,&quot;Marigny (Marne, France)&quot;,&quot;Marolles (Marne, France)&quot;,&quot;Marsangis (Marne, France)&quot;,&quot;Marson (Marne, France)&quot;,&quot;Massiges (Marne, France)&quot;,&quot;Matignicourt (Marne ; ancienne commune)&quot;,&quot;Matignicourt-Goncourt (Marne, France)&quot;,&quot;Matougues (Marne, France)&quot;,&quot;Maurupt (Marne ; ancienne commune)&quot;,&quot;Maurupt-le-Montois (Marne, France)&quot;,&quot;M\u00e9cringes (Marne, France)&quot;,&quot;Meix-Saint-Epoing (Le) (Marne, France)&quot;,&quot;Meix-Tiercelin (Le) (Marne, France)&quot;,&quot;Melzicourt (Marne ; ancienne commune)&quot;,&quot;Merfy (Marne, France)&quot;,&quot;Merlaut (Marne, France)&quot;,&quot;M\u00e9ry (Marne ; ancienne commune)&quot;,&quot;M\u00e9ry-Pr\u00e9mecy (Marne, France)&quot;,&quot;Mesneux (Les) (Marne, France)&quot;,&quot;Mesnil-l\u00e8s-Hurlus (Le) (Marne ; ancienne commune)&quot;,&quot;Mesnil-sur-Oger (Le) (Marne, France)&quot;,&quot;Minaucourt (Marne ; ancienne commune)&quot;,&quot;Minaucourt-le-Mesnil-l\u00e8s-Hurlus (Marne, France)&quot;,&quot;Minecourt (Marne ; ancienne commune)&quot;,&quot;Moeurs (Marne ; ancienne commune)&quot;,&quot;Moeurs-Verdey (Marne, France)&quot;,&quot;Moiremont (Marne, France)&quot;,&quot;Moivre (Marne, France)&quot;,&quot;Moncetz (Marne ; ancienne commune)&quot;,&quot;Moncetz-l&#039;Abbaye (Marne, France)&quot;,&quot;Moncetz-Longevas (Marne, France)&quot;,&quot;Mondement (Marne ; ancienne commune)&quot;,&quot;Mondement-Montgivroux (Marne, France)&quot;,&quot;Montbr\u00e9 (Marne, France)&quot;,&quot;Mont\u00e9preux (Marne, France)&quot;,&quot;Montgenost (Marne, France)&quot;,&quot;Montgivroux (Marne ; ancienne commune)&quot;,&quot;Monthelon (Marne, France)&quot;,&quot;Montigny-sur-Vesle (Marne, France)&quot;,&quot;Montmirail (Marne, France)&quot;,&quot;Montmort (Marne ; ancienne commune)&quot;,&quot;Montmort-Lucy (Marne, France)&quot;,&quot;Montois (Le) (Marne ; ancienne commune)&quot;,&quot;Mont-sur-Courville (Marne, France)&quot;,&quot;Morains (Marne ; ancienne commune)&quot;,&quot;Morangis (Marne, France)&quot;,&quot;Moronvilliers (Marne ; ancienne commune)&quot;,&quot;Morsains (Marne, France)&quot;,&quot;Moslins (Marne, France)&quot;,&quot;Mourmelon-le-Grand (Marne, France)&quot;,&quot;Mourmelon-le-Petit (Marne, France)&quot;,&quot;Moussy (Marne, France)&quot;,&quot;Muizon (Marne, France)&quot;,&quot;Mutigny (Marne, France)&quot;,&quot;Mutry (Marne ; ancienne commune)&quot;,&quot;Nanteuil-la-For\u00eat (Marne, France)&quot;,&quot;Nanteuil-la-Fosse (Marne ; ancienne commune)&quot;,&quot;Nauroy (Marne ; ancienne commune)&quot;,&quot;Nesle-la-Reposte (Marne, France)&quot;,&quot;Nesle-le-Repons (Marne, France)&quot;,&quot;Neuville-au-Pont (La) (Marne, France)&quot;,&quot;Neuville-aux-Bois (La) (Marne, France)&quot;,&quot;Neuville-aux-Larris (La) (Marne, France)&quot;,&quot;Neuville-sous-Arzilli\u00e8res (Marne ; ancienne commune)&quot;,&quot;Neuvillette (La) (Marne ; ancienne commune)&quot;,&quot;Neuvy (Marne, France)&quot;,&quot;Nogent-l&#039;Abbesse (Marne, France)&quot;,&quot;Noirlieu (Marne, France)&quot;,&quot;Norm\u00e9e (Marne ; ancienne commune)&quot;,&quot;Norrois (Marne, France)&quot;,&quot;Noue (La) (Marne, France)&quot;,&quot;Nuisement-aux-Bois (Marne ; ancienne commune)&quot;,&quot;Nuisement-sur-Coole (Marne, France)&quot;,&quot;Nuisy (Marne ; ancienne commune)&quot;,&quot;Oeuilly (Marne, France)&quot;,&quot;Oger (Marne, France)&quot;,&quot;Ognes (Marne, France)&quot;,&quot;Oiry (Marne, France)&quot;,&quot;Olizy (Marne, France)&quot;,&quot;Omey (Marne, France)&quot;,&quot;Orbais (Marne ; ancienne commune)&quot;,&quot;Orbais-l&#039;Abbaye (Marne, France)&quot;,&quot;Orconte (Marne, France)&quot;,&quot;Ormes (Marne, France)&quot;,&quot;Outines (Marne, France)&quot;,&quot;Outrepont (Marne, France)&quot;,&quot;Oyes (Marne, France)&quot;,&quot;Pargny (Marne ; ancienne commune)&quot;,&quot;Pargny-l\u00e8s-Reims (Marne, France)&quot;,&quot;Pargny-sur-Saulx (Marne, France)&quot;,&quot;Passavant (Marne ; ancienne commune)&quot;,&quot;Passavant-en-Argonne (Marne, France)&quot;,&quot;Passy-Grigny (Marne, France)&quot;,&quot;P\u00e9as (Marne, France)&quot;,&quot;Perthes-l\u00e8s-Hurlus (Marne ; ancienne commune)&quot;,&quot;Petites-C\u00f4tes (Les) (Marne ; ancienne commune)&quot;,&quot;Petites-Loges (Les) (Marne, France)&quot;,&quot;Petite-Ville (La) (Marne ; ancienne commune)&quot;,&quot;P\u00e9vy (Marne, France)&quot;,&quot;Pierre-Morains (Marne, France)&quot;,&quot;Pierry (Marne, France)&quot;,&quot;Pleurs (Marne, France)&quot;,&quot;Plichancourt (Marne, France)&quot;,&quot;Plivot (Marne, France)&quot;,&quot;Pocancy (Marne, France)&quot;,&quot;Pogny (Marne, France)&quot;,&quot;Poilly (Marne, France)&quot;,&quot;Poix (Marne, France)&quot;,&quot;Pomacle (Marne, France)&quot;,&quot;Pontfaverger (Marne ; ancienne commune)&quot;,&quot;Pontfaverger-Moronvilliers (Marne, France)&quot;,&quot;Ponthion (Marne, France)&quot;,&quot;Possesse (Marne, France)&quot;,&quot;Potangis (Marne, France)&quot;,&quot;Pouillon (Marne, France)&quot;,&quot;Pourcy (Marne, France)&quot;,&quot;Pr\u00e9mecy (Marne ; ancienne commune)&quot;,&quot;Pringy (Marne, France)&quot;,&quot;Prosnes (Marne, France)&quot;,&quot;Prouilly (Marne, France)&quot;,&quot;Prunay (Marne, France)&quot;,&quot;Puisieulx (Marne, France)&quot;,&quot;Queudes (Marne, France)&quot;,&quot;Raps\u00e9court (Marne, France)&quot;,&quot;Recy (Marne, France)&quot;,&quot;Reims (Marne, France)&quot;,&quot;Reims-la-Br\u00fbl\u00e9e (Marne, France)&quot;,&quot;Remicourt (Marne, France)&quot;,&quot;Renneville (Marne ; ancienne commune)&quot;,&quot;Reuil (Marne, France)&quot;,&quot;Reuves (Marne, France)&quot;,&quot;R\u00e9veillon (Marne, France)&quot;,&quot;Rieux (Marne, France)&quot;,&quot;Rilly-la-Montagne (Marne, France)&quot;,&quot;Ripont (Marne ; ancienne commune)&quot;,&quot;Rivi\u00e8res (Les) (Marne ; ancienne commune)&quot;,&quot;Rivi\u00e8res-Henruel (Les) (Marne, France)&quot;,&quot;Romain (Marne, France)&quot;,&quot;Romery (Marne, France)&quot;,&quot;Romigny (Marne, France)&quot;,&quot;Rosay (Marne ; ancienne commune)&quot;,&quot;Rosnay (Marne, France)&quot;,&quot;Rouffy (Marne, France)&quot;,&quot;Rouvroy (Marne ; ancienne commune)&quot;,&quot;Rouvroy-Ripont (Marne, France)&quot;,&quot;Sacy (Marne, France)&quot;,&quot;Saint-Amand (Marne ; ancienne commune)&quot;,&quot;Saint-Amand-sur-Fion (Marne, France)&quot;,&quot;Saint-Bon (Marne, France)&quot;,&quot;Saint-Brice-Courcelles (Marne, France)&quot;,&quot;Saint-Ch\u00e9ron (Marne, France)&quot;,&quot;Sainte-Gemme (Marne, France)&quot;,&quot;Sainte-Livi\u00e8re (Marne, France)&quot;,&quot;Sainte-Marie-\u00e0-Py (Marne, France)&quot;,&quot;Sainte-Marie-du-Lac-Nuisement (Marne, France)&quot;,&quot;Sainte-Menehould (Marne, France)&quot;,&quot;Saint-\u00c9tienne-au-Temple (Marne, France)&quot;,&quot;Saint-\u00c9tienne-sur-Suippe (Marne, France)&quot;,&quot;Saint-Eulien (Marne, France)&quot;,&quot;Saint-Euphraise-et-Clairizet (Marne, France)&quot;,&quot;Saint-Genest (Marne ; ancienne commune)&quot;,&quot;Saint-Germain-la-Ville (Marne, France)&quot;,&quot;Saint-Gibrien (Marne, France)&quot;,&quot;Saint-Gilles (Marne, France)&quot;,&quot;Saint-Hilaire-au-Temple (Marne, France)&quot;,&quot;Saint-Hilaire-le-Grand (Marne, France)&quot;,&quot;Saint-Hilaire-le-Petit (Marne, France)&quot;,&quot;Saint-Imoges (Marne, France)&quot;,&quot;Saint-Jean-devant-Possesse (Marne, France)&quot;,&quot;Saint-Jean-sur-Moivre (Marne, France)&quot;,&quot;Saint-Jean-sur-Tourbe (Marne, France)&quot;,&quot;Saint-Just (Marne ; ancienne commune)&quot;,&quot;Saint-Just-Sauvage (Marne, France)&quot;,&quot;Saint-L\u00e9onard (Marne, France)&quot;,&quot;Saint-Loup (Marne, France)&quot;,&quot;Saint-Louvent (Marne ; ancienne commune)&quot;,&quot;Saint-Lumier-en-Champagne (Marne, France)&quot;,&quot;Saint-Lumier-la-Populeuse (Marne, France)&quot;,&quot;Saint-Mard-l\u00e8s-Rouffy (Marne, France)&quot;,&quot;Saint-Mard-sur-Auve (Marne, France)&quot;,&quot;Saint-Mard-sur-le-Mont (Marne, France)&quot;,&quot;Saint-Martin-aux-Champs (Marne, France)&quot;,&quot;Saint-Martin-d&#039;Ablois (Marne, France)&quot;,&quot;Saint-Martin-l&#039;Heureux (Marne, France)&quot;,&quot;Saint-Martin-sur-le-Pr\u00e9 (Marne, France)&quot;,&quot;Saint-Masmes (Marne, France)&quot;,&quot;Saint-Memmie (Marne, France)&quot;,&quot;Saint-Ouen (Marne ; ancienne commune)&quot;,&quot;Saint-Ouen-Domprot (Marne, France)&quot;,&quot;Saint-Pierre (Marne, France)&quot;,&quot;Saint-Pierre-aux-Oies (Marne ; ancienne commune)&quot;,&quot;Saint-Prix (Marne ; ancienne commune)&quot;,&quot;Saint-Quentin-les-Marais (Marne, France)&quot;,&quot;Saint-Quentin-le-Verger (Marne, France)&quot;,&quot;Saint-Quentin-sur-Coole (Marne, France)&quot;,&quot;Saint-Remy-en-Bouzemont (Marne ; ancienne commune)&quot;,&quot;Saint-Remy-en-Bouzemont-Saint-Genest-et-Isson (Marne, France)&quot;,&quot;Saint-Remy-sous-Broyes (Marne, France)&quot;,&quot;Saint-Remy-sur-Bussy (Marne, France)&quot;,&quot;Saint-Saturnin (Marne, France)&quot;,&quot;Saint-Souplet (Marne ; ancienne commune)&quot;,&quot;Saint-Souplet-sur-Py (Marne, France)&quot;,&quot;Saint-Thierry (Marne, France)&quot;,&quot;Saint-Thomas (Marne ; ancienne commune)&quot;,&quot;Saint-Thomas-en-Argonne (Marne, France)&quot;,&quot;Saint-Utin (Marne, France)&quot;,&quot;Saint-Vrain (Marne, France)&quot;,&quot;Sapicourt (Marne ; ancienne commune)&quot;,&quot;Sapignicourt (Marne, France)&quot;,&quot;Sarcy (Marne, France)&quot;,&quot;Saron-sur-Aube (Marne, France)&quot;,&quot;Sarry (Marne, France)&quot;,&quot;Saudoy (Marne, France)&quot;,&quot;Savigny-sur-Ardres (Marne, France)&quot;,&quot;Scrupt (Marne, France)&quot;,&quot;Selles (Marne, France)&quot;,&quot;Sept-Saulx (Marne, France)&quot;,&quot;Sermaize-les-Bains (Marne, France)&quot;,&quot;Sermaize-sur-Saulx (Marne ; ancienne commune)&quot;,&quot;Sermiers (Marne, France)&quot;,&quot;Servon (Marne ; ancienne commune)&quot;,&quot;Servon-Melzicourt (Marne, France)&quot;,&quot;Serzy-et-Prin (Marne, France)&quot;,&quot;S\u00e9zanne (Marne, France)&quot;,&quot;Sillery (Marne, France)&quot;,&quot;Sivry-Ante (Marne, France)&quot;,&quot;Sivry-sur-Ante (Marne ; ancienne commune)&quot;,&quot;Sogny-aux-Moulins (Marne, France)&quot;,&quot;Sogny-en-l&#039;Angle (Marne, France)&quot;,&quot;Soigny (Marne ; ancienne commune)&quot;,&quot;Soilly (Marne ; ancienne commune)&quot;,&quot;Soizy-aux-Bois (Marne, France)&quot;,&quot;Somme-Bionne (Marne, France)&quot;,&quot;Sommepy (Marne ; ancienne commune)&quot;,&quot;Sommepy-Tahure (Marne, France)&quot;,&quot;Sommesous (Marne, France)&quot;,&quot;Somme-Suippe (Marne, France)&quot;,&quot;Somme-Tourbe (Marne, France)&quot;,&quot;Somme-Vesle (Marne, France)&quot;,&quot;Somme-Y\u00e8vre (Marne, France)&quot;,&quot;Sompuis (Marne, France)&quot;,&quot;Somsois (Marne, France)&quot;,&quot;Songy (Marne, France)&quot;,&quot;Souain (Marne ; ancienne commune)&quot;,&quot;Souain-Perthes-l\u00e8s-Hurlus (Marne, France)&quot;,&quot;Soud\u00e9 (Marne, France)&quot;,&quot;Soud\u00e9-Notre-Dame (Marne ; ancienne commune)&quot;,&quot;Soud\u00e9-Sainte-Croix (Marne ; ancienne commune)&quot;,&quot;Soudron (Marne, France)&quot;,&quot;Soulanges (Marne, France)&quot;,&quot;Souli\u00e8res (Marne, France)&quot;,&quot;Soyer (Marne ; ancienne commune)&quot;,&quot;Suippes (Marne, France)&quot;,&quot;Suizy-le-Franc (Marne, France)&quot;,&quot;Tahure (Marne ; ancienne commune)&quot;,&quot;Taissy (Marne, France)&quot;,&quot;Talus-Saint-Prix (Marne, France)&quot;,&quot;Tauxi\u00e8res (Marne ; ancienne commune)&quot;,&quot;Tauxi\u00e8res-Mutry (Marne, France)&quot;,&quot;Thaas (Marne, France)&quot;,&quot;Thibie (Marne, France)&quot;,&quot;Thi\u00e9blemont (Marne ; ancienne commune)&quot;,&quot;Thi\u00e9blemont-Far\u00e9mont (Marne, France)&quot;,&quot;Thil (Marne, France)&quot;,&quot;Thillois (Marne, France)&quot;,&quot;Thoult (Le) (Marne ; ancienne commune)&quot;,&quot;Thoult-Trosnay (Le) (Marne, France)&quot;,&quot;Thuisy (Marne ; ancienne commune)&quot;,&quot;Tilloy (Marne ; ancienne commune)&quot;,&quot;Tilloy-et-Bellay (Marne, France)&quot;,&quot;Tinqueux (Marne, France)&quot;,&quot;Togny-aux-Boeufs (Marne, France)&quot;,&quot;Toulon (Marne ; ancienne commune)&quot;,&quot;Toulon-la-Montagne (Marne ; ancienne commune)&quot;,&quot;Tours-sur-Marne (Marne, France)&quot;,&quot;Tramery (Marne, France)&quot;,&quot;Tr\u00e9con (Marne, France)&quot;,&quot;Tr\u00e9fols (Marne, France)&quot;,&quot;Tr\u00e9pail (Marne, France)&quot;,&quot;Treslon (Marne, France)&quot;,&quot;Trigny (Marne, France)&quot;,&quot;Trois-Fontaines (Marne ; ancienne commune)&quot;,&quot;Trois-Fontaines-l&#039;Abbaye (Marne, France)&quot;,&quot;Trois-Puits (Marne, France)&quot;,&quot;Troissy (Marne, France)&quot;,&quot;Trosnay (Marne ; ancienne commune)&quot;,&quot;Unchair (Marne, France)&quot;,&quot;Vadenay (Marne, France)&quot;,&quot;Val-des-Marais (Marne, France)&quot;,&quot;Val-de-Vesle (Marne, France)&quot;,&quot;Val-de-Vi\u00e8re (Marne, France)&quot;,&quot;Valmy (Marne, France)&quot;,&quot;Vanault-le-Ch\u00e2tel (Marne, France)&quot;,&quot;Vanault-les-Dames (Marne, France)&quot;,&quot;Vandeuil (Marne, France)&quot;,&quot;Vandi\u00e8res (Marne, France)&quot;,&quot;Varimont (Marne ; ancienne commune)&quot;,&quot;Vassimont (Marne ; ancienne commune)&quot;,&quot;Vassimont-et-Chapelaine (Marne, France)&quot;,&quot;Vatry (Marne, France)&quot;,&quot;Vauchamps (Marne, France)&quot;,&quot;Vauciennes (Marne, France)&quot;,&quot;Vauclerc (Marne, France)&quot;,&quot;Vaudancourt (Marne ; ancienne commune)&quot;,&quot;Vaudemange (Marne, France)&quot;,&quot;Vaudemanges (Marne ; ancienne commune)&quot;,&quot;Vaudesincourt (Marne, France)&quot;,&quot;Vaurefroy (Marne ; ancienne commune)&quot;,&quot;Vavray-le-Grand (Marne, France)&quot;,&quot;Vavray-le-Petit (Marne, France)&quot;,&quot;V\u00e9lye (Marne, France)&quot;,&quot;Ventelay (Marne, France)&quot;,&quot;Venteuil (Marne, France)&quot;,&quot;Verdey (Marne ; ancienne commune)&quot;,&quot;Verdon (Marne, France)&quot;,&quot;Vernancourt (Marne, France)&quot;,&quot;Verneuil (Marne, France)&quot;,&quot;Verri\u00e8res (Marne, France)&quot;,&quot;Vert-la-Gravelle (Marne ; ancienne commune)&quot;,&quot;Vert-Toulon (Marne, France)&quot;,&quot;Vertus (Marne, France)&quot;,&quot;Verzenay (Marne, France)&quot;,&quot;Verzy (Marne, France)&quot;,&quot;V\u00e9signeul-sur-Coole (Marne ; ancienne commune)&quot;,&quot;V\u00e9signeul-sur-Marne (Marne, France)&quot;,&quot;Veuve (La) (Marne, France)&quot;,&quot;V\u00e9zier (Le) (Marne, France)&quot;,&quot;Vieil-Dampierre (Le) (Marne, France)&quot;,&quot;Vienne-la-Ville (Marne, France)&quot;,&quot;Vienne-le-Ch\u00e2teau (Marne, France)&quot;,&quot;Ville-Dommange (Marne, France)&quot;,&quot;Ville-en-Selve (Marne, France)&quot;,&quot;Ville-en-Tardenois (Marne, France)&quot;,&quot;Villeneuve-la-Lionne (Marne, France)&quot;,&quot;Villeneuve-l\u00e8s-Charleville (La) (Marne, France)&quot;,&quot;Villeneuve-l\u00e8s-Rouffy (Marne ; ancienne commune)&quot;,&quot;Villeneuve-Renneville (Marne ; ancienne commune)&quot;,&quot;Villeneuve-Renneville-Chevigny (Marne, France)&quot;,&quot;Villeneuve-Saint-Vistre (Marne ; ancienne commune)&quot;,&quot;Villeneuve-Saint-Vistre-et-Villevotte (Marne, France)&quot;,&quot;Villers-Allerand (Marne, France)&quot;,&quot;Villers-aux-Bois (Marne, France)&quot;,&quot;Villers-aux-Corneilles (Marne ; ancienne commune)&quot;,&quot;Villers-aux-Noeuds (Marne, France)&quot;,&quot;Villers-en-Argonne (Marne, France)&quot;,&quot;Villers-Franqueux (Marne, France)&quot;,&quot;Villers-le-Ch\u00e2teau (Marne, France)&quot;,&quot;Villers-le-Sec (Marne, France)&quot;,&quot;Villers-Marmery (Marne, France)&quot;,&quot;Villers-sous-Ch\u00e2tillon (Marne, France)&quot;,&quot;Villeseneux (Marne, France)&quot;,&quot;Ville-sous-Orbais (La) (Marne, France)&quot;,&quot;Ville-sur-Tourbe (Marne, France)&quot;,&quot;Villevenard (Marne, France)&quot;,&quot;Villevotte (Marne ; ancienne commune)&quot;,&quot;Villiers-aux-Corneilles (Marne, France)&quot;,&quot;Villotte (Marne ; ancienne commune)&quot;,&quot;Vinay (Marne, France)&quot;,&quot;Vincelles (Marne, France)&quot;,&quot;Vindey (Marne, France)&quot;,&quot;Virginy (Marne, France)&quot;,&quot;Vitry-en-Perthois (Marne, France)&quot;,&quot;Vitry-la-Ville (Marne, France)&quot;,&quot;Vitry-le-Fran\u00e7ois (Marne, France)&quot;,&quot;Voilemont (Marne, France)&quot;,&quot;Voipreux (Marne, France)&quot;,&quot;Vouarces (Marne, France)&quot;,&quot;Vouciennes (Marne ; ancienne commune)&quot;,&quot;Vouillers (Marne, France)&quot;,&quot;Vouzy (Marne, France)&quot;,&quot;Vraux (Marne, France)&quot;,&quot;Vrigny (Marne, France)&quot;,&quot;Vroil (Marne, France)&quot;,&quot;Wargemoulin (Marne ; ancienne commune)&quot;,&quot;Wargemoulin-Hurlus (Marne, France)&quot;,&quot;Warmeriville (Marne, France)&quot;,&quot;Wez (Marne ; ancienne commune)&quot;,&quot;Witry-l\u00e8s-Reims (Marne, France)&quot;]"
+                    data-selected-options="null"
+                    data-placeholder="Sélectionnez un ou plusieurs éléments"
+                    data-no-options-message="Aucun résultat"
+                    data-loading-message="Chargement en cours..."
+                    data-submit-as-json="false"
+                ></div>
+                    </div>
+    </div>
+
+                    </div>
+                                    <div class="form-group">
+                            <label class="col-12" for="1-controlledAccessGeographicName">Quartier (paroisse…)</label>
+    <div class="row">
+        <div class="col-12">
+                            <div
+                    class="enhanced-select multiselect"
+                    data-input-id="1-controlledAccessGeographicName"
+                    data-name="1-controlledAccessGeographicName"
+                    data-options="[&quot;Ch\u00e2lons-sur-Marne (Marne) -- Abbaye Saint-Pierre-aux-Monts&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- Cath\u00e9drale Saint Etienne&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- H\u00f4pital militaire Saint-Pierre&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- H\u00f4pital Saint-Maur&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- H\u00f4tel-Dieu&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- Maison d&#039;Ostende&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- Paroisse de La Trinit\u00e9&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- Paroisse Notre Dame&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- Paroisse Saint-Alpin&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- Paroisse Saint-Antoine&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- Paroisse Sainte-Catherine&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- Paroisse Saint-Eloi&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- Paroisse Sainte-Marguerite&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- Paroisse Saint-Etienne&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- Paroisse Saint-Germain&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- Paroisse Saint-Jean&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- Paroisse Saint-Loup&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- Paroisse Saint-Nicaise&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- Paroisse Saint-Nicolas&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- Paroisse Saint-Sulpice&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- Section Est&quot;,&quot;Ch\u00e2lons-sur-Marne (Marne) -- Section Ouest&quot;,&quot;Courtisols (Marne) -- Paroisse Saint-Julien&quot;,&quot;Courtisols (Marne) -- Paroisse Saint-Martin&quot;,&quot;Courtisols (Marne) -- Paroisse Saint-Memmie&quot;,&quot;Juvigny (Marne) -- Paroisse Notre-Dame&quot;,&quot;Juvigny (Marne) -- Paroisse Saint-Martin&quot;,&quot;Montmort (Marne) -- Paroisse La Charmoye&quot;,&quot;Moslins (Marne) -- Abbaye d&#039;Argensolles&quot;,&quot;Reims (Marne) -- Abbaye Saint-Nicaise&quot;,&quot;Reims (Marne) -- Arrondissement (1er)&quot;,&quot;Reims (Marne) -- Arrondissement (2e)&quot;,&quot;Reims (Marne) -- Arrondissement (3e)&quot;,&quot;Reims (Marne) -- Chapitre Cath\u00e9drale&quot;,&quot;Reims (Marne) -- Chapitre Sainte-Balsamie&quot;,&quot;Reims (Marne) -- Commanderie du Temple&quot;,&quot;Reims (Marne) -- H\u00f4pital Saint-Marcoul&quot;,&quot;Reims (Marne) -- H\u00f4tel-Dieu&quot;,&quot;Reims (Marne) -- Paroisse de l&#039;Eglise M\u00e9tropolitaine&quot;,&quot;Reims (Marne) -- Paroisse R\u00e9volutionnaire Saint-Remy&quot;,&quot;Reims (Marne) -- Paroisse Saint-Andr\u00e9&quot;,&quot;Reims (Marne) -- Paroisse Saint-Denis&quot;,&quot;Reims (Marne) -- Paroisse Sainte-Madeleine&quot;,&quot;Reims (Marne) -- Paroisse Sainte-Marie-Madeleine&quot;,&quot;Reims (Marne) -- Paroisse Saint-Etienne&quot;,&quot;Reims (Marne) -- Paroisse Saint-Hilaire&quot;,&quot;Reims (Marne) -- Paroisse Saint-Jacques&quot;,&quot;Reims (Marne) -- Paroisse Saint-Jean&quot;,&quot;Reims (Marne) -- Paroisse Saint-Julien&quot;,&quot;Reims (Marne) -- Paroisse Saint-Martin&quot;,&quot;Reims (Marne) -- Paroisse Saint-Maurice&quot;,&quot;Reims (Marne) -- Paroisse Saint-Michel&quot;,&quot;Reims (Marne) -- Paroisse Saint-Pierre&quot;,&quot;Reims (Marne) -- Paroisse Saint-Remi&quot;,&quot;Reims (Marne) -- Paroisse Saint-Symphorien&quot;,&quot;Reims (Marne) -- Paroisse Saint-Timoth\u00e9e&quot;,&quot;Sainte-Menehould (Marne) -- Hameau de la Grange-aux-Bois&quot;,&quot;Saint-Memmie (Marne) -- Paroisse Saint-Andr\u00e9&quot;,&quot;Saint-Memmie (Marne) -- Paroisse Saint-Martin&quot;,&quot;S\u00e9zanne (Marne) -- Paroisse Notre-Dame&quot;,&quot;S\u00e9zanne (Marne) -- Paroisse Saint-Denis&quot;,&quot;Verneuil (Marne) -- Paroisse Verneuil-le-Bas&quot;,&quot;Verneuil (Marne) -- Paroisse Verneuil-le-Haut&quot;,&quot;Vienne-le-Ch\u00e2teau (Marne) -- Hameau de La Haraz\u00e9e&quot;,&quot;Vitry-en-Perthois (Marne) -- Abbaye Saint-Jacques&quot;,&quot;Vitry-en-Perthois (Marne) -- Paroisse Saint-Etienne&quot;,&quot;Vitry-le-Fran\u00e7ois (Marne) -- Chapitre Notre-Dame&quot;,&quot;Vitry-le-Fran\u00e7ois (Marne) -- H\u00f4pital G\u00e9n\u00e9ral&quot;,&quot;Vitry-le-Fran\u00e7ois (Marne) -- Paroisse Notre-Dame&quot;,&quot;Vitry-le-Fran\u00e7ois (Marne) -- Paroisse Saint-Germain&quot;]"
+                    data-selected-options="null"
+                    data-placeholder="Sélectionnez un ou plusieurs éléments"
+                    data-no-options-message="Aucun résultat"
+                    data-loading-message="Chargement en cours..."
+                    data-submit-as-json="false"
+                ></div>
+                    </div>
+    </div>
+
+                    </div>
+                                    <div class="form-group">
+                            <label class="col-12" for="2-date">Période</label>
+    <div class="row">
+        <div class="col-12">
+                            <div class="form-row period">
+                                                            <div class="col">
+                        <label class="sr-only" for="2-date_begin">Période - Année de début</label>
+                        <input
+                            placeholder="Année de début"
+                            onfocus="this.placeholder = ''"
+                            onblur="this.placeholder = 'Année de début'"
+                            type="number"
+                            class="form-control"
+                            id="2-date_begin"
+                            name="2-date_begin"
+                            data-validate-required="#2-date_end"
+                            min="1" max="2026"
+                            value=""/>
+                    </div>
+                    <div class="col">
+                        <label class="sr-only" for="2-date_end">Période - Année de fin</label>
+                        <input
+                            placeholder="Année de fin"
+                            onfocus="this.placeholder = ''"
+                            onblur="this.placeholder = 'Année de fin'"
+                            type="number"
+                            class="form-control"
+                            id="2-date_end"
+                            name="2-date_end"
+                            data-validate-gte="#2-date_begin"
+                            data-validate-required="#2-date_begin"
+                            min="1" max="2026"
+                            value=""/>
+                    </div>
+                </div>
+                    </div>
+    </div>
+
+                    </div>
+                                    <div class="form-group">
+                            <label class="col-12" for="3-date">Ou année exacte</label>
+    <div class="row">
+        <div class="col-12">
+                            <input type="number" id="3-date" class="form-control" name="3-date" min="1" max="2026"
+                       value=""/>
+                    </div>
+    </div>
+
+                    </div>
+                                    <div class="form-group">
+                            <label class="col-12" for="4-controlledAccessPhysicalCharacteristic">Type d’acte</label>
+    <div class="row">
+        <div class="col-12">
+                            <div
+                    class="enhanced-select multiselect"
+                    data-input-id="4-controlledAccessPhysicalCharacteristic"
+                    data-name="4-controlledAccessPhysicalCharacteristic"
+                    data-options="[&quot;bapt\u00eames - naissances&quot;,&quot;mariages&quot;,&quot;publications de mariage&quot;,&quot;s\u00e9pultures - d\u00e9c\u00e8s&quot;,&quot;tables d\u00e9cennales&quot;]"
+                    data-selected-options="null"
+                    data-placeholder="Sélectionnez un ou plusieurs éléments"
+                    data-no-options-message="Aucun résultat"
+                    data-loading-message="Chargement en cours..."
+                    data-submit-as-json="false"
+                ></div>
+                    </div>
+    </div>
+
+                    </div>
+                
+                <div class="row form-group">
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class=" d-flex flex-wrap justify-content-center">
+                            <a class="btn btn-secondary" href="/search/form/6977c5eb-072c-470c-8dfa-6d6488a2d71e">
+                                Vider les champs
+                            </a>
+                            <button class="btn btn-primary" type="submit">Rechercher</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+            </div>
+
+        </main>
+
+        <div id="scrollup-anchor">
+            <a href="#page-top" id="scrollup" class="no-print" title="Revenir en haut de la page">
+                <i class="fa fa-angle-up" aria-hidden="true"></i>
+                <span class="sr-only">Revenir en haut de la page</span>
+            </a>
+        </div>
+
+                        
+    <footer id="footer" role="contentinfo">
+                                
+                                <div class="container default">
+        <div class="row">
+                            <div class="header-footer-col col-md-3 col-lg-3 header-footer-align-left">
+                                            <span class="heading">Archives départementales de la Marne</span>
+                    
+                    <div class="mt-0">
+    <a class="btn" href="/page/nous-rendre-visite">NOUS RENDRE VISITE</a>
+</div>
+<div class="mt-2">
+    <a class="btn" href="/page/nous-contacter">&nbsp;&nbsp;NOUS CONTACTER&nbsp;&nbsp;</a>
+</div>
+                </div>
+                            <div class="header-footer-col col-md-3 col-lg-3 header-footer-align-left">
+                                            <span class="heading">Centre de Châlons</span>
+                    
+                    <div class="mt-0">
+    <p class="mb-0">23 rue Carnot</p>
+    <p class="mb-0">51 000 Châlons-en-Champagne</p>
+</div>
+<div class="mt-2">
+    <i class="fa fa-phone" aria-label="Téléphone" aria-hidden="true"></i> 03 26 68 06 69
+</div>
+                </div>
+                            <div class="header-footer-col col-md-3 col-lg-3 header-footer-align-left">
+                                            <span class="heading">Centre de Reims</span>
+                    
+                    <div class="mt-0">
+    <p class="mb-0">44 avenue de l'Yser</p>
+    <p class="mb-0">51 100 Reims</p>
+</div>
+<div class="mt-2">
+    <i class="fa fa-phone" aria-label="Téléphone" aria-hidden="true"></i> 03 26 85 17 58
+</div>
+                </div>
+                            <div class="header-footer-col col-md-3 col-lg-3 header-footer-align-left">
+                    
+                    
+    <a href="http://www.marne.fr/"
+                             rel="noopener noreferrer"            target="_blank"
+            >
+            <img
+        src="/assets/src/application/Custom/assets/static/front/img/icono-logo/logo-footer.e51cc8e25d21db0b56b246d02557c7c6.svg"
+                alt="Archives Départementales de la Marne"    />
+
+    </a>
+                </div>
+                    </div>
+    </div>
+
+                                                            <div class="container institutional">
+        <div class="row">
+                            <div class="header-footer-col col-md-12 col-lg-12 header-footer-align-center">
+                    
+                    <ul class="links">
+            <li class="link
+">
+        <a href="/page/credits"
+         title="Crédits"             >
+                            Credits
+            </a>
+    </li>
+            <li class="link
+">
+        <a href="/page/conditions-generales-d-utilisation"
+         title="Conditions Générales d&#039;Utilisation"             >
+                            Conditions Générales d&#039;Utilisation
+            </a>
+    </li>
+            <li class="link
+">
+        <a href="/page/conditions-generales-d-utilisation"
+         title="Mentions légales"             >
+                            Mentions légales
+            </a>
+    </li>
+            <li class="link
+">
+        <a href="/page/conditions-generales-d-utilisation"
+         title="Politique de confidentialité"             >
+                            Politique de confidentialité
+            </a>
+    </li>
+            <li class="link
+">
+    </li>
+            <li class="link
+">
+        <a href="http://www.marne.fr/"
+         title="Département de la Marne"                      rel="noopener noreferrer"            target="_blank"
+            >
+                            Département de la Marne
+            </a>
+    </li>
+    </ul>
+                </div>
+                    </div>
+    </div>
+
+                        </footer>
+        
+                                    <script src="/assets/common.9810116a885a90cd2023.js"></script>
+                            <script src="/assets/vendor.front.f6b98f87650f8caaa3a7.js"></script>
+                            <script src="/assets/front.5ef24b8672a3b86dd0b8.js"></script>
+                    
+        <div id="rgpd-infos"
+     class="disclaimer"
+     >
+    <div class="text">
+        <p>
+            Ce site utilise des <span lang="en">cookies</span> techniques nécessaires à son bon fonctionnement. Ils ne contiennent aucune donnée personnelle et sont exemptés de consentements (Article 82 de la loi Informatique et Libertés).
+        </p>
+        <p>
+                            Vous pouvez consulter les conditions générales d’utilisation sur le lien ci-dessous.
+                    </p>
+    </div>
+    <div class="buttons">
+                                    <a href="/page/conditions-generales-d-utilisation" rel="noopener noreferrer" target="_blank" class="btn btn-secondary" title="En savoir plus sur les conditions générales d&#039;utilisation">
+            En savoir plus
+        </a>
+        <button type="button" class="btn btn-primary" id="rgpd-infos-understand">J&#039;ai compris</button>
+    </div>
+
+</div>
+        
+    </body>
+</html>

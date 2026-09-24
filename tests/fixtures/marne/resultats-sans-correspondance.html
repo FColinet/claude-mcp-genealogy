@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head data-captcha="recaptcha">
+                    
+
+    <!-- Matomo -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+
+        /* This code come from https://www.cnil.fr/sites/default/files/typo/document/Configuration_piwik.pdf */
+        _paq.push([function() {
+            var self = this;
+            function getOriginalVisitorCookieTimeout() {
+                var now = new Date(),
+                    nowTs = Math.round(now.getTime() / 1000),
+                    visitorInfo = self.getVisitorInfo();
+                var createTs = parseInt(visitorInfo[2]);
+                var cookieTimeout = 33696000; // 13 mois en secondes
+                return createTs + cookieTimeout - nowTs;
+            }
+            this.setVisitorCookieTimeout( getOriginalVisitorCookieTimeout() );
+        }]);
+
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['disableCookies']);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="https://stats.marne.fr//";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', 18]);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <!-- End Matomo Code -->
+
+        
+        <meta charset="utf-8">
+        <title>Etat civil  - Recherche - Archives départementales de la Marne</title>
+
+        <meta name="twitter:card" content="summary" /><meta property="og:url" content="https://archives.marne.fr/search/results?formUuid=6977c5eb-072c-470c-8dfa-6d6488a2d71e&amp;sort=date_asc&amp;mode=table&amp;0-controlledAccessGeographicName=Ch%C3%A2lons-sur-Marne" /><meta property="og:title" content="Etat civil  - Recherche" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"/>
+        <meta name="format-detection" content="telephone=no" />
+
+        
+                    <link rel="apple-touch-icon" sizes="180x180" href="/assets/src/application/Custom/assets/static/front/favicons/apple-touch-icon.ef9db261f6388f91a29d908034c3b032.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/src/application/Custom/assets/static/front/favicons/favicon-32x32.26366413dbe7eea2ef5adb31ca878872.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/src/application/Custom/assets/static/front/favicons/favicon-16x16.9576d0a447b4f8fa4e64dac76b614b7a.png">
+<link rel="manifest" href="/assets/src/application/Custom/assets/static/front/favicons/site.webmanifest.6ad2bd6962b36ccd88e1e053531ed9d5.json">
+<link rel="mask-icon" href="/assets/src/application/Custom/assets/static/front/favicons/safari-pinned-tab.ff29b8b31c8c9741ea20c69889196e12.svg" color="#5bbad5">
+
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+        
+        <link rel="stylesheet" type="text/css" href="/assets/assets/front/scss/common.3a564ca19cc28b973fb997541d232d88.css" />
+        <link rel="stylesheet" type="text/css" href="/assets/assets/fonts/index.0e20f316ab6f0bba53f85722bccd5491.css">
+
+            
+    <link rel="stylesheet" type="text/css" href="/assets/assets/front/scss/affichage-table.e9ba04137e80eaeba723cd8ad164a602.css" />
+
+        <link rel="stylesheet" type="text/css" href="/assets/src/application/Custom/assets/src/scss/index.22345e0d33605aef80d6a87a66e6b5d5.css" />
+        <link rel="stylesheet" type="text/css" href="/assets/node_modules/@knight-lab/timelinejs/dist/css/timeline.1f24a26632f1a70a920eae94a02df2a0.css" />
+
+    </head>
+    <body id="display-no-results">
+
+                    <header id="header" role="banner">
+    <div class="institutional-banner-desktop">
+        
+    <div class="institutional-banner-burger">
+                    <div class="container institutional">
+        <div class="row">
+                            <div class="header-footer-col col-md-12 col-lg-6 header-footer-align-left">
+                    
+                    <ul class="links">
+            <li class="link
+">
+        <a href="http://www.marne.fr/"
+         title="Un site du Département de la Marne"                      rel="noopener noreferrer"            target="_blank"
+            >
+                            Un site du Département de la Marne
+            </a>
+    </li>
+    </ul>
+                </div>
+                            <div class="header-footer-col col-md-12 col-lg-6 header-footer-align-right">
+                    
+                    
+    <a href="http://www.marne.fr/"
+                             rel="noopener noreferrer"            target="_blank"
+            >
+            <img
+        src="/assets/src/application/Custom/assets/static/front/img/icono-logo/logo-institutional-header.db41c5251ee649751fa204592eb35150.svg"
+        title="Département de la Marne"        alt="Département de la Marne"    />
+
+    </a>
+                </div>
+                    </div>
+    </div>
+
+    </div>
+
+    </div>
+    <div id="main-header">
+        <a id="logo" href="/" title="Aller à la page d&#039;accueil">
+    <img class="logo-desktop" src="/assets/src/application/Custom/assets/static/front/img/icono-logo/logo-header.496d266d6c35b52accf898f038559850.svg" alt="Archives départementales de la Marne"/>
+
+        
+    <img class="logo-mobile" src="/assets/src/application/Custom/assets/static/front/img/icono-logo/logo-header.496d266d6c35b52accf898f038559850.svg" alt="Archives départementales de la Marne"/>
+
+    <span class="sr-only">Archives départementales de la Marne</span>
+</a>
+            
+<nav id="main-menu" role="navigation">
+            <ul aria-label="menu principal">
+                                    <li class="submenu-container"><a href="#">Rechercher</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/archives-numerisees"
+    title="Aller à la page : &quot;Archives numérisées&quot;"
+>Archives numérisées</a>
+</li>
+                    <li><a
+    href="/page/chercher-en-ligne"
+    title="Aller à la page : &quot;Chercher en ligne&quot;"
+>Chercher en ligne</a>
+</li>
+                    <li><a
+    href="/search/form/83ab14d5-e856-4a83-bf05-b46fdad2f01a"
+    title="Aller à la page : &quot;Chercher dans la bibliothèque&quot;"
+>Chercher dans la bibliothèque</a>
+</li>
+                    <li><a
+    href="/page/aides-a-la-recherche"
+    title="Aller à la page : &quot;Aides à la recherche&quot;"
+>Aides à la recherche</a>
+</li>
+            </ul>
+</li>
+                                <li class="submenu-container"><a href="#">Découvrir et enseigner</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/expositions"
+    title="Aller à la page : &quot;Expositions&quot;"
+>Expositions</a>
+</li>
+                    <li><a
+    href="/page/nos-expositions-virtuelles"
+    title="Aller à la page : &quot;Expositions virtuelles&quot;"
+>Expositions virtuelles</a>
+</li>
+                    <li><a
+    href="/page/le-service-educatif"
+    title="Aller à la page : &quot;Service éducatif&quot;"
+>Service éducatif</a>
+</li>
+                    <li><a
+    href="/page/tresors-d-archives"
+    title="Aller à la page : &quot;Trésors d&#039;archives&quot;"
+>Trésors d&#039;archives</a>
+</li>
+                    <li><a
+    href="/page/jeux"
+    title="Aller à la page : &quot;Jeux&quot;"
+>Jeux</a>
+</li>
+                    <li><a
+    href="/page/publications"
+    title="Aller à la page : &quot;Publications&quot;"
+>Publications</a>
+</li>
+                    <li><a
+    href="/page/actualites"
+    title="Aller à la page : &quot;Actualités&quot;"
+>Actualités</a>
+</li>
+            </ul>
+</li>
+                                <li class="submenu-container"><a href="#">Infos pratiques</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/qui-sommes-nous-"
+    title="Aller à la page : &quot;Qui sommes-nous ?&quot;"
+>Qui sommes-nous ?</a>
+</li>
+                    <li><a
+    href="/page/nous-rendre-visite"
+    title="Aller à la page : &quot;Nous rendre visite&quot;"
+>Nous rendre visite</a>
+</li>
+                    <li><a
+    href="/page/nos-deux-batiments"
+    title="Aller à la page : &quot;Nos deux bâtiments&quot;"
+>Nos deux bâtiments</a>
+</li>
+                    <li><a
+    href="/page/nos-salles-de-lecture"
+    title="Aller à la page : &quot;Nos salles de lecture&quot;"
+>Nos salles de lecture</a>
+</li>
+                    <li><a
+    href="/page/repartition-des-collections"
+    title="Aller à la page : &quot;Répartition des collections&quot;"
+>Répartition des collections</a>
+</li>
+                    <li><a
+    href="/page/reproduction-et-reutilisation"
+    title="Aller à la page : &quot;Reproduction et réutilisation&quot;"
+>Reproduction et réutilisation</a>
+</li>
+            </ul>
+</li>
+            
+        </ul>
+    </nav>
+<nav id="burger-main-menu" class="left" role="navigation">
+            <div>
+            <label for="burger-sidebar" class="toggle" aria-label="Ouvrir le menu déroulant">
+                <span class="sr-only">Ouvrir le menu déroulant</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </label>
+            <input type="checkbox" id="burger-sidebar" class="sidebartoggler">
+
+            <div class="page-wrap">
+                <div class="sidebar">
+                    <ul class="mainnav">
+                                                <li class="submenu-container"><a href="#">Rechercher</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/archives-numerisees"
+    title="Aller à la page : &quot;Archives numérisées&quot;"
+>Archives numérisées</a>
+</li>
+                    <li><a
+    href="/page/chercher-en-ligne"
+    title="Aller à la page : &quot;Chercher en ligne&quot;"
+>Chercher en ligne</a>
+</li>
+                    <li><a
+    href="/search/form/83ab14d5-e856-4a83-bf05-b46fdad2f01a"
+    title="Aller à la page : &quot;Chercher dans la bibliothèque&quot;"
+>Chercher dans la bibliothèque</a>
+</li>
+                    <li><a
+    href="/page/aides-a-la-recherche"
+    title="Aller à la page : &quot;Aides à la recherche&quot;"
+>Aides à la recherche</a>
+</li>
+            </ul>
+</li>
+                                <li class="submenu-container"><a href="#">Découvrir et enseigner</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/expositions"
+    title="Aller à la page : &quot;Expositions&quot;"
+>Expositions</a>
+</li>
+                    <li><a
+    href="/page/nos-expositions-virtuelles"
+    title="Aller à la page : &quot;Expositions virtuelles&quot;"
+>Expositions virtuelles</a>
+</li>
+                    <li><a
+    href="/page/le-service-educatif"
+    title="Aller à la page : &quot;Service éducatif&quot;"
+>Service éducatif</a>
+</li>
+                    <li><a
+    href="/page/tresors-d-archives"
+    title="Aller à la page : &quot;Trésors d&#039;archives&quot;"
+>Trésors d&#039;archives</a>
+</li>
+                    <li><a
+    href="/page/jeux"
+    title="Aller à la page : &quot;Jeux&quot;"
+>Jeux</a>
+</li>
+                    <li><a
+    href="/page/publications"
+    title="Aller à la page : &quot;Publications&quot;"
+>Publications</a>
+</li>
+                    <li><a
+    href="/page/actualites"
+    title="Aller à la page : &quot;Actualités&quot;"
+>Actualités</a>
+</li>
+            </ul>
+</li>
+                                <li class="submenu-container"><a href="#">Infos pratiques</a>
+    <ul class="subnav">
+                    <li><a
+    href="/page/qui-sommes-nous-"
+    title="Aller à la page : &quot;Qui sommes-nous ?&quot;"
+>Qui sommes-nous ?</a>
+</li>
+                    <li><a
+    href="/page/nous-rendre-visite"
+    title="Aller à la page : &quot;Nous rendre visite&quot;"
+>Nous rendre visite</a>
+</li>
+                    <li><a
+    href="/page/nos-deux-batiments"
+    title="Aller à la page : &quot;Nos deux bâtiments&quot;"
+>Nos deux bâtiments</a>
+</li>
+                    <li><a
+    href="/page/nos-salles-de-lecture"
+    title="Aller à la page : &quot;Nos salles de lecture&quot;"
+>Nos salles de lecture</a>
+</li>
+                    <li><a
+    href="/page/repartition-des-collections"
+    title="Aller à la page : &quot;Répartition des collections&quot;"
+>Répartition des collections</a>
+</li>
+                    <li><a
+    href="/page/reproduction-et-reutilisation"
+    title="Aller à la page : &quot;Reproduction et réutilisation&quot;"
+>Reproduction et réutilisation</a>
+</li>
+            </ul>
+</li>
+            
+                    </ul>
+                    
+    <div class="institutional-banner-burger">
+                    <div class="container institutional">
+        <div class="row">
+                            <div class="header-footer-col col-md-12 col-lg-6 header-footer-align-left">
+                    
+                    <ul class="links">
+            <li class="link
+">
+        <a href="http://www.marne.fr/"
+         title="Un site du Département de la Marne"                      rel="noopener noreferrer"            target="_blank"
+            >
+                            Un site du Département de la Marne
+            </a>
+    </li>
+    </ul>
+                </div>
+                            <div class="header-footer-col col-md-12 col-lg-6 header-footer-align-right">
+                    
+                    
+    <a href="http://www.marne.fr/"
+                             rel="noopener noreferrer"            target="_blank"
+            >
+            <img
+        src="/assets/src/application/Custom/assets/static/front/img/icono-logo/logo-institutional-header.db41c5251ee649751fa204592eb35150.svg"
+        title="Département de la Marne"        alt="Département de la Marne"    />
+
+    </a>
+                </div>
+                    </div>
+    </div>
+
+    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+<nav id="user-profile" role="navigation">
+    <ul>
+                    <li class="user-profile submenu-container">
+                            <a href="/user/login?targetRoute=front.search&amp;targetRouteParameters%5BformUuid%5D=6977c5eb-072c-470c-8dfa-6d6488a2d71e&amp;targetRouteParameters%5Bsort%5D=date_asc&amp;targetRouteParameters%5Bmode%5D=table&amp;targetRouteParameters%5B0-controlledAccessGeographicName%5D=Ch%C3%A2lons-sur-Marne" class="user-profile-icon-container" title="Mon espace personnel">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            </a>
+            <ul class="subnav">
+                <li>
+                    <a href="/user/login?targetRoute=front.search&amp;targetRouteParameters%5BformUuid%5D=6977c5eb-072c-470c-8dfa-6d6488a2d71e&amp;targetRouteParameters%5Bsort%5D=date_asc&amp;targetRouteParameters%5Bmode%5D=table&amp;targetRouteParameters%5B0-controlledAccessGeographicName%5D=Ch%C3%A2lons-sur-Marne" title="Se connecter">Se connecter</a>
+                </li>
+                                    <li>
+                        <a href="/register" title="S&#039;inscrire">S&#039;inscrire</a>
+                    </li>
+                            </ul>
+
+                </li>
+    
+    </ul>
+</nav>
+<nav id="burger-user-profile" class="right" role="navigation">
+    <label for="profile-sidebar" class="toggle">
+                    <i class="fa fa-user-circle-o user-profile-icon " aria-hidden="true"></i>
+    
+    </label>
+    <input type="checkbox" id="profile-sidebar" class="sidebartoggler">
+
+    <div class="page-wrap">
+        <div class="sidebar">
+            <ul class="mainnav">
+                                                <li>
+                <a href="/user/login?targetRoute=front.search&amp;targetRouteParameters%5BformUuid%5D=6977c5eb-072c-470c-8dfa-6d6488a2d71e&amp;targetRouteParameters%5Bsort%5D=date_asc&amp;targetRouteParameters%5Bmode%5D=table&amp;targetRouteParameters%5B0-controlledAccessGeographicName%5D=Ch%C3%A2lons-sur-Marne" title="Se connecter">Se connecter</a>
+            </li>
+                            <li>
+                    <a href="/register" title="S&#039;inscrire">S&#039;inscrire</a>
+                </li>
+                        
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    </div>
+</header>
+        
+        <div id="old-browsers" class="disclaimer">
+    <div class="text">
+        Ce portail est conçu pour être utilisé sur les navigateurs Chrome, Firefox, Safari et Edge. Pour une expérience optimale, nous vous invitons à utiliser l&#039;un de ces navigateurs.
+    </div>
+    <div class="buttons">
+        <button type="button" class="btn btn-primary" id="old-browsers-accept">J&#039;ai compris</button>
+    </div>
+</div>
+
+        <main role="main" id="page-top">
+
+                                        
+            
+            
+            
+    
+                            
+<aside class="alert-container row">
+</aside>
+            
+            <div class="container">
+                <h1 hidden="true">Résultats de la recherche</h1>
+<section id="list-container" class="active">
+            <div class="no-result">
+    <p>Aucun résultat ne correspond à votre requête</p>
+</div>
+
+    </section>
+            </div>
+
+        </main>
+
+        <div id="scrollup-anchor">
+            <a href="#page-top" id="scrollup" class="no-print" title="Revenir en haut de la page">
+                <i class="fa fa-angle-up" aria-hidden="true"></i>
+                <span class="sr-only">Revenir en haut de la page</span>
+            </a>
+        </div>
+
+                        
+    <footer id="footer" role="contentinfo">
+                                
+                                <div class="container default">
+        <div class="row">
+                            <div class="header-footer-col col-md-3 col-lg-3 header-footer-align-left">
+                                            <span class="heading">Archives départementales de la Marne</span>
+                    
+                    <div class="mt-0">
+    <a class="btn" href="/page/nous-rendre-visite">NOUS RENDRE VISITE</a>
+</div>
+<div class="mt-2">
+    <a class="btn" href="/page/nous-contacter">&nbsp;&nbsp;NOUS CONTACTER&nbsp;&nbsp;</a>
+</div>
+                </div>
+                            <div class="header-footer-col col-md-3 col-lg-3 header-footer-align-left">
+                                            <span class="heading">Centre de Châlons</span>
+                    
+                    <div class="mt-0">
+    <p class="mb-0">23 rue Carnot</p>
+    <p class="mb-0">51 000 Châlons-en-Champagne</p>
+</div>
+<div class="mt-2">
+    <i class="fa fa-phone" aria-label="Téléphone" aria-hidden="true"></i> 03 26 68 06 69
+</div>
+                </div>
+                            <div class="header-footer-col col-md-3 col-lg-3 header-footer-align-left">
+                                            <span class="heading">Centre de Reims</span>
+                    
+                    <div class="mt-0">
+    <p class="mb-0">44 avenue de l'Yser</p>
+    <p class="mb-0">51 100 Reims</p>
+</div>
+<div class="mt-2">
+    <i class="fa fa-phone" aria-label="Téléphone" aria-hidden="true"></i> 03 26 85 17 58
+</div>
+                </div>
+                            <div class="header-footer-col col-md-3 col-lg-3 header-footer-align-left">
+                    
+                    
+    <a href="http://www.marne.fr/"
+                             rel="noopener noreferrer"            target="_blank"
+            >
+            <img
+        src="/assets/src/application/Custom/assets/static/front/img/icono-logo/logo-footer.e51cc8e25d21db0b56b246d02557c7c6.svg"
+                alt="Archives Départementales de la Marne"    />
+
+    </a>
+                </div>
+                    </div>
+    </div>
+
+                                                            <div class="container institutional">
+        <div class="row">
+                            <div class="header-footer-col col-md-12 col-lg-12 header-footer-align-center">
+                    
+                    <ul class="links">
+            <li class="link
+">
+        <a href="/page/credits"
+         title="Crédits"             >
+                            Credits
+            </a>
+    </li>
+            <li class="link
+">
+        <a href="/page/conditions-generales-d-utilisation"
+         title="Conditions Générales d&#039;Utilisation"             >
+                            Conditions Générales d&#039;Utilisation
+            </a>
+    </li>
+            <li class="link
+">
+        <a href="/page/conditions-generales-d-utilisation"
+         title="Mentions légales"             >
+                            Mentions légales
+            </a>
+    </li>
+            <li class="link
+">
+        <a href="/page/conditions-generales-d-utilisation"
+         title="Politique de confidentialité"             >
+                            Politique de confidentialité
+            </a>
+    </li>
+            <li class="link
+">
+    </li>
+            <li class="link
+">
+        <a href="http://www.marne.fr/"
+         title="Département de la Marne"                      rel="noopener noreferrer"            target="_blank"
+            >
+                            Département de la Marne
+            </a>
+    </li>
+    </ul>
+                </div>
+                    </div>
+    </div>
+
+                        </footer>
+        
+                                    <script src="/assets/common.9810116a885a90cd2023.js"></script>
+                            <script src="/assets/vendor.front.f6b98f87650f8caaa3a7.js"></script>
+                            <script src="/assets/front.5ef24b8672a3b86dd0b8.js"></script>
+                    
+        <div id="rgpd-infos"
+     class="disclaimer"
+     >
+    <div class="text">
+        <p>
+            Ce site utilise des <span lang="en">cookies</span> techniques nécessaires à son bon fonctionnement. Ils ne contiennent aucune donnée personnelle et sont exemptés de consentements (Article 82 de la loi Informatique et Libertés).
+        </p>
+        <p>
+                            Vous pouvez consulter les conditions générales d’utilisation sur le lien ci-dessous.
+                    </p>
+    </div>
+    <div class="buttons">
+                                    <a href="/page/conditions-generales-d-utilisation" rel="noopener noreferrer" target="_blank" class="btn btn-secondary" title="En savoir plus sur les conditions générales d&#039;utilisation">
+            En savoir plus
+        </a>
+        <button type="button" class="btn btn-primary" id="rgpd-infos-understand">J&#039;ai compris</button>
+    </div>
+
+</div>
+        
+    </body>
+</html>
