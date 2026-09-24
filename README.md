@@ -13,13 +13,13 @@ Ce serveur adopte donc une architecture en **connecteurs** : chaque département
 - [x] Socle du serveur MCP (outils `rechercher_registres_etat_civil` et `lister_departements_disponibles`)
 - [x] Connecteur Nord (59)
 - [x] Connecteur Marne (51)
-- [ ] Connecteur Aisne (02) — portail différent (visionneuse EAD plutôt que formulaire de recherche), à étudier séparément
-- [ ] Connecteur Pas-de-Calais (62) — identifié comme pertinent d'après l'arbre généalogique fourni (branche Lumbres/Calais/Saint-Omer)
-- [ ] Archives de l'État en Belgique — une bonne partie de l'ascendance remonte au Hainaut et à la province de Namur ; système d'archives distinct, à évaluer séparément
+- [ ] Aisne (02) — **non implémenté délibérément** : la recherche passe par un portail protégé par [Anubis](https://github.com/TecharoHQ/anubis), un anti-bot dont la page d'accueil déclare explicitement viser à contrer le scraping par les IA. Contourner cette protection irait à l'encontre d'une volonté explicite de l'éditeur du site.
+- [ ] Pas-de-Calais (62) — **non implémenté délibérément** : identifié comme pertinent par un arbre généalogique réel, mais la recherche de registres passe systématiquement par `archivesenligne.pasdecalais.fr`, protégé par un anti-bot commercial (F5/Distil, cookies `TSPD`) qui bloque tout client non-navigateur, y compris après obtention des cookies de session. Même politique de non-contournement que pour l'Aisne.
+- [ ] Archives de l'État en Belgique — une bonne partie de l'ascendance peut remonter au Hainaut et à la province de Namur. Contrairement aux cas ci-dessus, ce n'est pas un problème d'anti-bot : la recherche (portail `search.arch.be`) nécessite un compte personnel authentifié. Décision à prendre avec l'utilisateur avant implémentation (faut-il gérer des identifiants personnels, sous quelle forme, avec quelles garanties de sécurité).
 
 Le Nord et la Marne partagent la même famille de portail de recherche avancée (`src/connectors/portailRechercheAvancee.ts`) : formulaire à `/search/form/<uuid>`, résultats à `/search/results`. Le connecteur analyse le formulaire à chaque recherche (noms de champs, liste des communes valides) plutôt que de figer des index de champs en dur, car ceux-ci diffèrent d'un département à l'autre et peuvent changer.
 
-**Limite connue :** ces portails sont protégés par un pare-feu applicatif qui bloque les requêtes émises par `fetch` de Node.js (mais pas `curl`) dans certains environnements sandboxés (dont l'environnement cloud de développement utilisé pour ce projet). Cela n'a pas été observé en exécution locale normale ; si `rechercher_registres_etat_civil` renvoie une erreur HTTP 403 de façon inattendue, vérifier que la machine qui exécute le serveur n'est pas elle-même derrière un proxy sortant restrictif.
+**Principe de non-contournement des protections anti-bot :** quand la recherche d'état civil d'un département passe par un système de protection délibérément conçu pour bloquer les accès automatisés (Anubis, F5/Distil, DataDome, etc.), ce projet ne cherche pas à le contourner (résolution du challenge JS via navigateur headless, etc.), même pour un usage personnel légitime. Un simple pare-feu générique (type Cloudflare basique, sans challenge JS) n'entre pas dans ce cas.
 
 ## Prérequis
 
