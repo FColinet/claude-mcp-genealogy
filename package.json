@@ -1,0 +1,32 @@
+{
+  "name": "claude-mcp-genealogy",
+  "version": "0.1.0",
+  "description": "Serveur MCP pour la recherche généalogique dans les archives départementales françaises (état civil numérisé)",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "claude-mcp-genealogy": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": ["mcp", "genealogie", "genealogy", "archives", "etat-civil"],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "tsx": "^4.19.2",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.1"
+  }
+}
