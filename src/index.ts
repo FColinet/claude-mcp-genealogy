@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { creerConnecteurBelgique } from "./connectors/belgique.js";
 import { creerConnecteurMarne } from "./connectors/marne.js";
 import { creerConnecteurNord } from "./connectors/nord.js";
 import { RegistreConnecteurs } from "./connectors/registry.js";
@@ -8,7 +9,8 @@ import { creerServeur } from "./serveur.js";
 const registre = new RegistreConnecteurs();
 registre.enregistrer(creerConnecteurNord());
 registre.enregistrer(creerConnecteurMarne());
-// L'Aisne utilise un portail différent ; son connecteur n'est pas encore implémenté.
+registre.enregistrer(creerConnecteurBelgique());
+// L'Aisne et le Pas-de-Calais sont protégés par des anti-bots dédiés : voir le README.
 
 const server = creerServeur(registre);
 
