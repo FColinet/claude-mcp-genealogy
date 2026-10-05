@@ -58,11 +58,12 @@ npm install
 npm run dev        # démarre le serveur en mode développement (stdio)
 npm test           # exécute la suite de tests (Vitest)
 npm run test:watch # tests en mode watch
+npm run test:coverage # tests + rapport de couverture (échoue sous 80 %)
 npm run lint        # vérification des types TypeScript (strict)
 npm run build       # compile vers dist/
 ```
 
-Ce projet suit une démarche **TDD** : chaque nouveau connecteur ou outil doit être accompagné de tests écrits avant l'implémentation.
+Ce projet suit une démarche **TDD** : chaque nouveau connecteur ou outil doit être accompagné de tests écrits avant l'implémentation. La couverture doit rester **≥ 80 %** (instructions, branches, fonctions, lignes) : le seuil est configuré dans `vitest.config.ts` et `npm run test:coverage` échoue en dessous. Le point d'entrée `src/index.ts` en est exclu (simple assemblage du serveur et du transport stdio). Les tests du pilote Playwright (`tests/connectors/agathaPilote.test.ts`) utilisent une page factice : ils vérifient le scénario de pilotage, pas le comportement réel du site agatha.arch.be.
 
 ## Architecture
 

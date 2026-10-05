@@ -76,6 +76,26 @@ describe("serveur MCP", () => {
     expect(texteDe(reponse)).toContain('département "75"');
   });
 
+  it("signale en erreur une panne inattendue du connecteur au lieu de renvoyer des résultats", async () => {
+    const registre = new RegistreConnecteurs();
+    registre.enregistrer({
+      code: "59",
+      nom: "Nord",
+      async rechercherRegistres() {
+        throw new Error("portail injoignable");
+      },
+    });
+    const client = await demarrerClientEtServeur(registre);
+
+    const reponse = await client.callTool({
+      name: "rechercher_registres_etat_civil",
+      arguments: { departement: "59", commune: "Lille" },
+    });
+
+    expect(reponse.isError).toBe(true);
+    expect(texteDe(reponse)).toContain("portail injoignable");
+  });
+
   it("liste les départements disponibles via lister_departements_disponibles", async () => {
     const registre = new RegistreConnecteurs();
     registre.enregistrer(creerConnecteurFactice());

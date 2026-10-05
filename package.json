@@ -12,6 +12,7 @@
     "dev": "tsx src/index.ts",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
     "lint": "tsc -p tsconfig.json --noEmit"
   },
   "keywords": [
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "@types/node": "^26.6.2",
+    "@vitest/coverage-v8": "^5.0.1",
     "tsx": "^4.19.2",
     "typescript": "^7.0.2",
     "vitest": "^5.0.1"
