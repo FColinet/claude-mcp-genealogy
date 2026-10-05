@@ -16,6 +16,7 @@ Ce serveur adopte donc une architecture en **connecteurs** : chaque département
 - [x] Connecteur Belgique (`BE`) — **provisoire, voir avertissement ci-dessous**
 - [ ] Aisne (02) — **non implémenté délibérément** : la recherche passe par un portail protégé par [Anubis](https://github.com/TecharoHQ/anubis), un anti-bot dont la page d'accueil déclare explicitement viser à contrer le scraping par les IA. Contourner cette protection irait à l'encontre d'une volonté explicite de l'éditeur du site.
 - [ ] Pas-de-Calais (62) — **non implémenté délibérément** : identifié comme pertinent par un arbre généalogique réel, mais la recherche de registres passe systématiquement par `archivesenligne.pasdecalais.fr`, protégé par un anti-bot commercial (F5/Distil, cookies `TSPD`) qui bloque tout client non-navigateur, y compris après obtention des cookies de session. Même politique de non-contournement que pour l'Aisne.
+- [ ] Italie (Portale Antenati, `antenati.cultura.gov.it`) — **non implémentée** : au 5 octobre 2026, toute requête (y compris `/robots.txt`) reçoit un `403 Forbidden` générique d'un répartiteur de charge AWS (`awselb/2.0`), aussi bien depuis un environnement cloud que depuis un poste personnel avec `curl`, y compris avec un User-Agent qui s'identifie honnêtement. Aucun défi JavaScript ni anti-bot connu (Anubis, F5/Distil, DataDome) n'a été observé, mais il n'a pas été établi s'il s'agit d'un simple pare-feu générique ou d'un blocage voulu des accès automatisés, et le comportement dans un navigateur n'a pas été vérifié. Aucune tentative d'imiter un navigateur n'a été faite. Pistes : contacter les responsables du portail, ou capturer de vraies pages dans un navigateur comme fixtures avant de décider.
 
 Le Nord et la Marne partagent la même famille de portail de recherche avancée (`src/connectors/portailRechercheAvancee.ts`) : formulaire à `/search/form/<uuid>`, résultats à `/search/results`. Le connecteur analyse le formulaire à chaque recherche (noms de champs, liste des communes valides) plutôt que de figer des index de champs en dur, car ceux-ci diffèrent d'un département à l'autre et peuvent changer.
 
@@ -92,20 +93,59 @@ tests/
 5. Enregistrer le connecteur dans `src/index.ts` via `registre.enregistrer(...)`.
 6. Mettre à jour la section « Statut actuel » de ce README.
 
-## Utilisation avec Claude Desktop / Claude Code
+## Déploiement
 
-Une fois le projet buildé (`npm run build`), ajouter le serveur à la configuration MCP du client (par exemple `claude_desktop_config.json`) :
+Ce serveur n'est pas un service à héberger : il utilise le transport **stdio** (`src/index.ts`) et est lancé comme sous-processus par le client MCP (Claude Desktop, Claude Code...) sur la machine de l'utilisateur. Il n'existe à ce jour ni transport HTTP, ni image Docker, ni publication npm.
+
+### 1. Installer et compiler
+
+```bash
+npm install
+npm run build                     # produit dist/index.js
+npx playwright install chromium   # uniquement pour le connecteur Belgique
+```
+
+Après toute modification du code, relancer `npm run build` puis redémarrer le client MCP.
+
+### 2. Déclarer le serveur dans le client
+
+**Claude Code** (les options `--env` se placent avant le nom du serveur ; elles ne sont utiles que pour la Belgique) :
+
+```bash
+claude mcp add --env AGATHA_USERNAME=... --env AGATHA_PASSWORD=... \
+  genealogy -- node /chemin/absolu/claude-mcp-genealogy/dist/index.js
+```
+
+**Claude Desktop** : ajouter le serveur à `claude_desktop_config.json` (Windows : `%APPDATA%\Claude\`, macOS : `~/Library/Application Support/Claude/`), puis redémarrer l'application :
 
 ```json
 {
   "mcpServers": {
     "genealogy": {
       "command": "node",
-      "args": ["/chemin/absolu/vers/claude-mcp-genealogy/dist/index.js"]
+      "args": ["/chemin/absolu/claude-mcp-genealogy/dist/index.js"],
+      "env": {
+        "AGATHA_USERNAME": "votre identifiant",
+        "AGATHA_PASSWORD": "votre mot de passe"
+      }
     }
   }
 }
 ```
+
+Sous Windows, écrire le chemin avec des `/` (`C:/Users/.../dist/index.js`) ou doubler les `\`.
+
+### 3. Identifiants du connecteur Belgique
+
+`AGATHA_USERNAME` et `AGATHA_PASSWORD` ne sont lues qu'au moment d'une recherche sur `BE`, pas au démarrage : sans elles, le serveur démarre normalement, le Nord et la Marne fonctionnent, et seule une requête Belgique échoue avec une erreur explicite. Attention : placées dans la configuration du client, elles sont stockées en clair dans ce fichier.
+
+### 4. Vérifier l'installation
+
+```bash
+npx @modelcontextprotocol/inspector node dist/index.js
+```
+
+L'inspecteur MCP ouvre une interface web permettant d'appeler les outils : `lister_departements_disponibles` doit lister les trois connecteurs enregistrés (Nord, Marne, Belgique), et `rechercher_registres_etat_civil` avec `departement: "59"` et `commune: "Lille"` doit renvoyer des registres réels.
 
 ## Outils MCP exposés
 
